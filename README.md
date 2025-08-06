@@ -30,7 +30,7 @@ graph TD
 
 Este proyecto incluye un sitio web completo desplegado en GitHub Pages que presenta:
 
-### 🌐 **[Ver Sitio Web](https://[tu-usuario].github.io/analisis-calidad-estimacion-1pl-bayesiana/)**
+### 🌐 **[Ver Sitio Web](https://gabrielortegaproyectos.github.io/analisis-calidad-estimacion-1pl-bayesiana/)**
 
 #### Contenido del sitio:
 - **Página Principal**: Descripción completa del experimento, metodología y tecnologías
