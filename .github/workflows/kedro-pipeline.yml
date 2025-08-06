@@ -1,0 +1,43 @@
+name: Run Kedro Pipeline
+
+on:
+  push:
+    branches: [ dev ]
+    paths:
+      - 'src/**'
+      - 'conf/**'
+      - 'pyproject.toml'
+      - 'requirements.txt'
+  pull_request:
+    branches: [ main, dev ]
+  workflow_dispatch:
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install UV
+        run: pip install uv
+      
+      - name: Install dependencies
+        run: uv sync
+      
+      - name: Run Kedro pipeline
+        run: uv run kedro run
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-outputs
+          path: |
+            data/08_reporting/**
+            data/07_model_output/**
+          retention-days: 30

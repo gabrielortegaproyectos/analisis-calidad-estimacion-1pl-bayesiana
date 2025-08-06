@@ -82,6 +82,9 @@ wheels/
 *.egg
 MANIFEST
 
+# Kedro-viz build (ignored locally but used in CI)
+build/
+
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
@@ -160,7 +163,3 @@ venv.bak/
 
 # mlflow local runs
 mlruns/*
-serve_local.sh
-update_pipeline_viz.sh
-serve_local.sh
-update_pipeline_viz.sh
