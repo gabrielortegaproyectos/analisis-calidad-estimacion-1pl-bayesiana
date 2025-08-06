@@ -5,8 +5,8 @@
       "name": "generate_parameters_node",
       "tags": [],
       "pipelines": [
-        "__default__",
-        "generate_responses"
+        "generate_responses",
+        "__default__"
       ],
       "type": "task",
       "modular_pipelines": null,
@@ -20,8 +20,8 @@
       "name": "params:number_of_questions",
       "tags": [],
       "pipelines": [
-        "__default__",
-        "generate_responses"
+        "generate_responses",
+        "__default__"
       ],
       "type": "parameters",
       "modular_pipelines": null,
@@ -34,8 +34,8 @@
       "name": "params:number_of_students",
       "tags": [],
       "pipelines": [
-        "__default__",
-        "generate_responses"
+        "generate_responses",
+        "__default__"
       ],
       "type": "parameters",
       "modular_pipelines": null,
@@ -48,44 +48,36 @@
       "name": "difficulties_cience_1",
       "tags": [],
       "pipelines": [
-        "__default__",
-        "generate_responses"
+        "generate_responses",
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": null,
       "layer": null,
       "dataset_type": "pandas.csv_dataset.CSVDataset",
-      "stats": {
-        "rows": 80,
-        "columns": 1,
-        "file_size": 1577
-      }
+      "stats": null
     },
     {
       "id": "1512d5e2",
       "name": "abilities_cience_1",
       "tags": [],
       "pipelines": [
-        "__default__",
-        "generate_responses"
+        "generate_responses",
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": null,
       "layer": null,
       "dataset_type": "pandas.csv_dataset.CSVDataset",
-      "stats": {
-        "rows": 1000,
-        "columns": 1,
-        "file_size": 19668
-      }
+      "stats": null
     },
     {
       "id": "f5617d53",
       "name": "simulate_responses_node",
       "tags": [],
       "pipelines": [
-        "__default__",
-        "generate_responses"
+        "generate_responses",
+        "__default__"
       ],
       "type": "task",
       "modular_pipelines": null,
@@ -96,37 +88,17 @@
       "name": "responses_cience_1",
       "tags": [],
       "pipelines": [
-        "__default__",
-        "generate_responses"
+        "generate_responses",
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": null,
       "layer": null,
       "dataset_type": "pandas.csv_dataset.CSVDataset",
-      "stats": {
-        "rows": 1000,
-        "columns": 80,
-        "file_size": 320631
-      }
+      "stats": null
     }
   ],
   "edges": [
-    {
-      "source": "1512d5e2",
-      "target": "f5617d53"
-    },
-    {
-      "source": "f5617d53",
-      "target": "06287146"
-    },
-    {
-      "source": "44469d65",
-      "target": "f5617d53"
-    },
-    {
-      "source": "1a0a0ec9",
-      "target": "73e790d7"
-    },
     {
       "source": "73e790d7",
       "target": "1512d5e2"
@@ -136,8 +108,24 @@
       "target": "44469d65"
     },
     {
+      "source": "1a0a0ec9",
+      "target": "73e790d7"
+    },
+    {
+      "source": "1512d5e2",
+      "target": "f5617d53"
+    },
+    {
+      "source": "f5617d53",
+      "target": "06287146"
+    },
+    {
       "source": "ca4f931c",
       "target": "73e790d7"
+    },
+    {
+      "source": "44469d65",
+      "target": "f5617d53"
     }
   ],
   "layers": [],
@@ -160,16 +148,20 @@
       "outputs": [],
       "children": [
         {
+          "id": "1a0a0ec9",
+          "type": "parameters"
+        },
+        {
+          "id": "ca4f931c",
+          "type": "parameters"
+        },
+        {
           "id": "f5617d53",
           "type": "task"
         },
         {
-          "id": "ca4f931c",
-          "type": "data"
-        },
-        {
-          "id": "1a0a0ec9",
-          "type": "parameters"
+          "id": "73e790d7",
+          "type": "task"
         },
         {
           "id": "1512d5e2",
@@ -180,20 +172,16 @@
           "type": "data"
         },
         {
-          "id": "73e790d7",
-          "type": "task"
-        },
-        {
-          "id": "44469d65",
-          "type": "data"
-        },
-        {
           "id": "1a0a0ec9",
           "type": "data"
         },
         {
           "id": "ca4f931c",
-          "type": "parameters"
+          "type": "data"
+        },
+        {
+          "id": "44469d65",
+          "type": "data"
         }
       ]
     }
