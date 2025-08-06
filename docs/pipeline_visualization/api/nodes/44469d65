@@ -2,36 +2,8 @@
   "type": "pandas.csv_dataset.CSVDataset",
   "filepath": "/home/gabriel/Escritorio/Proyectos/Proyectos_datos/Magister/analisis-calidad-estimacion-1pl-bayesiana/data/02_intermediate/difficulties_cience_1.csv",
   "run_command": "kedro run --to-outputs=difficulties_cience_1",
-  "preview": {
-    "index": [
-      0,
-      1,
-      2,
-      3,
-      4
-    ],
-    "columns": [
-      "difficulty"
-    ],
-    "data": [
-      [
-        -0.2226422180900368
-      ],
-      [
-        1.3256587436158882
-      ],
-      [
-        -0.5709700155939903
-      ],
-      [
-        0.6682492033245395
-      ],
-      [
-        1.145381016005768
-      ]
-    ]
-  },
-  "preview_type": "TablePreview",
+  "preview": null,
+  "preview_type": null,
   "stats": {
     "rows": 80,
     "columns": 1,

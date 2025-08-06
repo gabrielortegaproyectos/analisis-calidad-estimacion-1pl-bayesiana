@@ -35,7 +35,7 @@ jobs:
       - name: Copy visualization to docs
         run: |
           rm -rf docs/pipeline_visualization
-          cp -r pipeline_visualization.html docs/pipeline_visualization
+          cp -r build docs/pipeline_visualization
           
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
