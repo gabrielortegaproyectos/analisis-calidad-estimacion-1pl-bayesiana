@@ -15,17 +15,42 @@ El flujo completo se orquesta con **Kedro**; las métricas y artefactos se regis
 
 ```mermaid
 graph TD
-    A[1️⃣ Simular parámetros] --> B[2️⃣ Generar *prior* (b_pred)]
+    A[1️⃣ Simular parámetros] --> B[2️⃣ Generar prior para las dificultades]
     B --> C[3️⃣ Simular respuestas]
     C --> D[4️⃣ Estimar MLE]
-    C --> E[5️⃣ Estimar Bayes (PyMC)]
-    D --> F[6️⃣ Comparar & metricar]
+    C --> E[5️⃣ Estimar Bayes con PyMC]
+    D --> F[6️⃣ Comparar]
     E --> F
     F --> G[7️⃣ Reporte]
 ```
 
 ---
 
+## GitHub Pages - Sitio Web del Proyecto
+
+Este proyecto incluye un sitio web completo desplegado en GitHub Pages que presenta:
+
+### 🌐 **[Ver Sitio Web](https://[tu-usuario].github.io/analisis-calidad-estimacion-1pl-bayesiana/)**
+
+#### Contenido del sitio:
+- **Página Principal**: Descripción completa del experimento, metodología y tecnologías
+- **Pipeline Interactivo**: Visualización en tiempo real del pipeline con Kedro-Viz
+- **Resultados**: Métricas y análisis de comparación entre métodos MLE y Bayesiano
+
+#### Características:
+- ✨ Diseño moderno y responsivo con Bootstrap 5
+- 📊 Visualización interactiva del pipeline integrada
+- 📱 Optimizado para dispositivos móviles
+- 🚀 Despliegue automático con GitHub Actions
+- 🔄 Actualización automática de visualizaciones cuando se modifica el pipeline
+
+#### Configuración automática:
+El sitio se actualiza automáticamente cuando:
+1. Se hace push a la rama `main`
+2. Se ejecuta el pipeline y cambia la visualización
+3. Se modifica cualquier archivo en `/docs`
+
+---
 
 ## Configuración de GitHub Actions
 

@@ -1,0 +1,44 @@
+# GitHub Pages Configuration
+title: "Análisis Calidad Estimación 1PL Bayesiana"
+description: "Simulación y comparación de métodos de estimación para modelos 1PL: MLE vs Bayesiano"
+baseurl: "" # Base URL for the site
+url: "" # URL of the site
+
+# Theme
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme
+
+# Include files
+include:
+  - "pipeline_visualization"
+  - "pipeline_visualization/**/*"
+
+# Exclude files from processing
+exclude:
+  - "*.py"
+  - "*.pyc"
+  - "__pycache__/"
+  - ".git/"
+  - ".gitignore"
+  - "README.md"
+
+# Enable GitHub Pages features
+github:
+  is_project_page: true
+
+# Markdown processor
+markdown: kramdown
+highlighter: rouge
+
+# Site settings
+author: "Proyecto de Magíster"
+email: ""
+lang: "es-ES"
+
+# Navigation
+navigation:
+  - title: "Inicio"
+    url: "./index.html"
+  - title: "Pipeline"
+    url: "./pipeline_visualization/api/main"
