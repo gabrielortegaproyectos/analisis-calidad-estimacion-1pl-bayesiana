@@ -1,0 +1,54 @@
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+requires-python = ">=3.11"
+name = "analisis_calidad_estimacion_1pl_bayesiana"
+description = "Este entorno es para realizar un análisis de la calidad de la estimación respecto al prior en un modelo bayesiano para el modelo 1PL."
+readme = "README.md"
+dynamic = [ "version",]
+dependencies = [
+    "kedro",
+    "pandas",
+    "matplotlib",
+    "ipython>=8.10",
+    "jupyterlab>=3.0",
+    "kedro-datasets[pandas-csvdataset, pandas-exceldataset, pandas-parquetdataset, plotly-plotlydataset, plotly-jsondataset, matplotlib-matplotlibwriter]>=3.0",
+    "kedro-viz>=6.7.0",
+    "kedro[jupyter]~=0.19.11",
+    "notebook",
+    "scikit-learn~=1.5.1",
+    "seaborn~=0.12.1",
+    "arviz>=0.22.0",
+    "numpy>=1.26.0, <2.0.0",
+    "scipy>=1.8.0",
+    "pymc>=5.12.0",
+    "graphviz",
+]
+
+[project.scripts]
+analisis-calidad-estimacion-1pl-bayesiana = "analisis_calidad_estimacion_1pl_bayesiana.__main__:main"
+
+[project.optional-dependencies]
+docs = [ "docutils<0.21", "sphinx>=5.3,<7.3", "sphinx_rtd_theme==2.0.0", "nbsphinx==0.8.1", "sphinx-autodoc-typehints==1.20.2", "sphinx_copybutton==0.5.2", "ipykernel>=5.3, <7.0", "Jinja2<3.2.0", "myst-parser>=1.0,<2.1",]
+
+[tool.kedro]
+package_name = "analisis_calidad_estimacion_1pl_bayesiana"
+project_name = "analisis_calidad_estimacion_1pl_bayesiana"
+kedro_init_version = "0.19.14"
+tools = "['Custom Logging', 'Documentation', 'Data Structure']"
+example_pipeline = "False"
+source_dir = "src"
+
+[project.entry-points."kedro.hooks"]
+
+[tool.setuptools.dynamic.version]
+attr = "analisis_calidad_estimacion_1pl_bayesiana.__version__"
+
+[tool.setuptools.packages.find]
+where = [ "src",]
+namespaces = false
+
+[tool.kedro_telemetry]
+project_id = "6c5185cd84794b4a94df0e8a51934ca1"

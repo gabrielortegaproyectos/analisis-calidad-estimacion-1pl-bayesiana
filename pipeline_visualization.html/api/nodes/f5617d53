@@ -1,0 +1,13 @@
+{
+  "code": "def simulate_responses(item_difficulties, person_abilities, seed: int = 8927):\n    \"\"\"Simulate responses based on item difficulties and person abilities.\"\"\"\n    def sigmoid(x):\n        return 1 / (1 + np.exp(-x))\n\n    rng = np.random.default_rng(seed)\n    # Ensure data is in float64 format\n    item_difficulties = item_difficulties[\"difficulty\"].astype(float).values\n    person_abilities = person_abilities[\"ability\"].astype(float).values\n\n    n_persons = len(person_abilities)\n    n_items = len(item_difficulties)\n    responses = np.zeros((n_persons, n_items))\n    for i, theta in enumerate(person_abilities):\n        p = sigmoid(theta - item_difficulties)\n        responses[i, :] = rng.binomial(1, p)\n    responses_df = pd.DataFrame(responses, columns=[f\"Item_{j+1}\" for j in range(n_items)])\n    return responses_df\n",
+  "filepath": "analisis-calidad-estimacion-1pl-bayesiana/src/analisis_calidad_estimacion_1pl_bayesiana/pipelines/generate_responses/nodes.py",
+  "parameters": {},
+  "run_command": "kedro run --to-nodes='simulate_responses_node'",
+  "inputs": [
+    "difficulties_cience_1",
+    "abilities_cience_1"
+  ],
+  "outputs": [
+    "responses_cience_1"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "code": "def generate_parameters(n_items: int, n_persons: int, seed: int = 8927):\n    \"\"\"Generate item difficulties and person abilities.\"\"\"\n    rng = np.random.default_rng(seed)\n    item_difficulties = rng.normal(0, 1, n_items)\n    person_abilities = rng.normal(0, 1, n_persons)\n    # Convert to DataFrame for compatibility with Kedro\n    item_difficulties_df = pd.DataFrame(item_difficulties, columns=[\"difficulty\"])\n    person_abilities_df = pd.DataFrame(person_abilities, columns=[\"ability\"])\n    return item_difficulties_df, person_abilities_df\n",
+  "filepath": "analisis-calidad-estimacion-1pl-bayesiana/src/analisis_calidad_estimacion_1pl_bayesiana/pipelines/generate_responses/nodes.py",
+  "parameters": {
+    "number_of_questions": 80,
+    "number_of_students": 1000
+  },
+  "run_command": "kedro run --to-nodes='generate_parameters_node'",
+  "inputs": [
+    "params:number_of_questions",
+    "params:number_of_students"
+  ],
+  "outputs": [
+    "difficulties_cience_1",
+    "abilities_cience_1"
+  ]
+}

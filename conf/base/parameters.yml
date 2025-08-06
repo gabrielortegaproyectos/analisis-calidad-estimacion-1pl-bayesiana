@@ -1,0 +1,13 @@
+# Parameters for the simulation
+cience_stat_difficulty:
+  mean: 0.550
+  variance: 0.457
+
+number_of_questions: 80
+
+# Parameters for student abilities
+theta_distribution:
+  mean: 0.0
+  variance: 1.0
+
+number_of_students: 1000

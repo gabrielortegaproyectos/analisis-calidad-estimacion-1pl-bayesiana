@@ -1,0 +1,40 @@
+{
+  "type": "pandas.csv_dataset.CSVDataset",
+  "filepath": "/home/gabriel/Escritorio/Proyectos/Proyectos_datos/Magister/analisis-calidad-estimacion-1pl-bayesiana/data/02_intermediate/abilities_cience_1.csv",
+  "run_command": "kedro run --to-outputs=abilities_cience_1",
+  "preview": {
+    "index": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "columns": [
+      "ability"
+    ],
+    "data": [
+      [
+        0.3723544436755603
+      ],
+      [
+        1.8033260542405136
+      ],
+      [
+        -0.6847884038970536
+      ],
+      [
+        -1.7680519425282677
+      ],
+      [
+        2.3778141248549205
+      ]
+    ]
+  },
+  "preview_type": "TablePreview",
+  "stats": {
+    "rows": 1000,
+    "columns": 1,
+    "file_size": 19668
+  }
+}
