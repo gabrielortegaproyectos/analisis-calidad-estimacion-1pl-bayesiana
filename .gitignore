@@ -162,3 +162,5 @@ venv.bak/
 mlruns/*
 serve_local.sh
 update_pipeline_viz.sh
+serve_local.sh
+update_pipeline_viz.sh
