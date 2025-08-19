@@ -163,3 +163,4 @@ venv.bak/
 
 # mlflow local runs
 mlruns/*
+uv.lock
