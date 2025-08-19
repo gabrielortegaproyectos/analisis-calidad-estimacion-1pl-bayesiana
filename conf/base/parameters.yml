@@ -1,13 +1,14 @@
-# Parameters for the simulation
-cience_stat_difficulty:
-  mean: 0.550
-  variance: 0.457
+# --- Namespaced params for the 'sample__s1' modular pipeline ---
+sample__s1:
+  test_parameters:
+    stat_difficulty:
+      mean: 0.55
+      variance: 0.457
+    number_of_questions: 80
+  student_parameters:
+    number_of_students: 1000
+    theta_distribution:
+      mean: 0.0
+      variance: 1.0
+  seed: 123
 
-number_of_questions: 80
-
-# Parameters for student abilities
-theta_distribution:
-  mean: 0.0
-  variance: 1.0
-
-number_of_students: 1000

@@ -1,16 +1,20 @@
-# Here you can define all your datasets by using simple YAML syntax.
-#
-# Documentation for this file format can be found in "The Data Catalog"
+# Minimal catalog for sample 1 pipeline only
 # Link: https://docs.kedro.org/en/stable/data/data_catalog.html
 
-difficulties_cience_1:
+sample__s1.difficulties:
   type: pandas.CSVDataset
-  filepath: data/02_intermediate/difficulties_cience_1.csv
+  filepath: data/02_intermediate/sample__s1/difficulties.csv
+  save_args:
+    index: false
 
-abilities_cience_1:
+sample__s1.abilities:
   type: pandas.CSVDataset
-  filepath: data/02_intermediate/abilities_cience_1.csv
+  filepath: data/02_intermediate/sample__s1/abilities.csv
+  save_args:
+    index: false
 
-responses_cience_1:
+sample__s1.responses:
   type: pandas.CSVDataset
-  filepath: data/02_intermediate/responses_cience_1.csv
+  filepath: data/02_intermediate/sample__s1/responses.csv
+  save_args:
+    index: false
