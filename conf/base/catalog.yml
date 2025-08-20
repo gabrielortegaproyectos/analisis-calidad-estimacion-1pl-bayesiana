@@ -197,3 +197,530 @@ mmle_estimation__s1.mmle_estimation_summary:
   filepath: data/08_reporting/mmle_estimation__s1/mmle_estimation_summary.csv
   save_args:
     index: false
+
+# Salidas Bayes estimation por combinación (p, r) (S1)
+# 100 CSVs: p in [0.1..1.0], r in [0.1..1.0]
+# Se crean aquí para referencia; la pipeline los generará
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_1_r_0_1:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_1_r_0_1.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_1_r_0_2:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_1_r_0_2.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_1_r_0_3:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_1_r_0_3.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_1_r_0_4:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_1_r_0_4.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_1_r_0_5:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_1_r_0_5.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_1_r_0_6:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_1_r_0_6.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_1_r_0_7:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_1_r_0_7.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_1_r_0_8:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_1_r_0_8.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_1_r_0_9:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_1_r_0_9.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_1_r_1_0:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_1_r_1_0.csv
+  save_args:
+    index: false
+
+# p=0.2
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_2_r_0_1:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_2_r_0_1.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_2_r_0_2:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_2_r_0_2.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_2_r_0_3:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_2_r_0_3.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_2_r_0_4:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_2_r_0_4.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_2_r_0_5:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_2_r_0_5.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_2_r_0_6:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_2_r_0_6.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_2_r_0_7:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_2_r_0_7.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_2_r_0_8:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_2_r_0_8.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_2_r_0_9:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_2_r_0_9.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_2_r_1_0:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_2_r_1_0.csv
+  save_args:
+    index: false
+
+# p=0.3
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_3_r_0_1:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_3_r_0_1.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_3_r_0_2:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_3_r_0_2.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_3_r_0_3:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_3_r_0_3.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_3_r_0_4:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_3_r_0_4.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_3_r_0_5:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_3_r_0_5.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_3_r_0_6:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_3_r_0_6.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_3_r_0_7:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_3_r_0_7.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_3_r_0_8:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_3_r_0_8.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_3_r_0_9:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_3_r_0_9.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_3_r_1_0:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_3_r_1_0.csv
+  save_args:
+    index: false
+
+# p=0.4
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_4_r_0_1:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_4_r_0_1.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_4_r_0_2:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_4_r_0_2.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_4_r_0_3:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_4_r_0_3.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_4_r_0_4:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_4_r_0_4.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_4_r_0_5:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_4_r_0_5.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_4_r_0_6:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_4_r_0_6.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_4_r_0_7:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_4_r_0_7.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_4_r_0_8:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_4_r_0_8.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_4_r_0_9:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_4_r_0_9.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_4_r_1_0:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_4_r_1_0.csv
+  save_args:
+    index: false
+
+# p=0.5
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_5_r_0_1:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_5_r_0_1.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_5_r_0_2:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_5_r_0_2.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_5_r_0_3:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_5_r_0_3.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_5_r_0_4:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_5_r_0_4.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_5_r_0_5:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_5_r_0_5.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_5_r_0_6:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_5_r_0_6.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_5_r_0_7:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_5_r_0_7.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_5_r_0_8:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_5_r_0_8.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_5_r_0_9:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_5_r_0_9.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_5_r_1_0:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_5_r_1_0.csv
+  save_args:
+    index: false
+
+# p=0.6
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_6_r_0_1:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_6_r_0_1.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_6_r_0_2:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_6_r_0_2.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_6_r_0_3:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_6_r_0_3.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_6_r_0_4:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_6_r_0_4.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_6_r_0_5:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_6_r_0_5.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_6_r_0_6:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_6_r_0_6.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_6_r_0_7:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_6_r_0_7.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_6_r_0_8:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_6_r_0_8.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_6_r_0_9:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_6_r_0_9.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_6_r_1_0:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_6_r_1_0.csv
+  save_args:
+    index: false
+
+# p=0.7
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_7_r_0_1:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_7_r_0_1.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_7_r_0_2:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_7_r_0_2.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_7_r_0_3:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_7_r_0_3.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_7_r_0_4:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_7_r_0_4.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_7_r_0_5:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_7_r_0_5.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_7_r_0_6:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_7_r_0_6.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_7_r_0_7:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_7_r_0_7.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_7_r_0_8:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_7_r_0_8.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_7_r_0_9:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_7_r_0_9.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_7_r_1_0:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_7_r_1_0.csv
+  save_args:
+    index: false
+
+# p=0.8
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_8_r_0_1:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_8_r_0_1.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_8_r_0_2:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_8_r_0_2.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_8_r_0_3:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_8_r_0_3.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_8_r_0_4:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_8_r_0_4.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_8_r_0_5:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_8_r_0_5.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_8_r_0_6:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_8_r_0_6.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_8_r_0_7:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_8_r_0_7.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_8_r_0_8:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_8_r_0_8.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_8_r_0_9:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_8_r_0_9.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_8_r_1_0:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_8_r_1_0.csv
+  save_args:
+    index: false
+
+# p=0.9
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_9_r_0_1:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_9_r_0_1.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_9_r_0_2:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_9_r_0_2.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_9_r_0_3:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_9_r_0_3.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_9_r_0_4:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_9_r_0_4.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_9_r_0_5:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_9_r_0_5.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_9_r_0_6:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_9_r_0_6.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_9_r_0_7:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_9_r_0_7.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_9_r_0_8:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_9_r_0_8.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_9_r_0_9:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_9_r_0_9.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_0_9_r_1_0:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_9_r_1_0.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_1_0_r_0_1:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_1_0_r_0_1.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_1_0_r_0_2:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_1_0_r_0_2.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_1_0_r_0_3:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_1_0_r_0_3.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_1_0_r_0_4:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_1_0_r_0_4.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_1_0_r_0_5:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_1_0_r_0_5.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_1_0_r_0_6:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_1_0_r_0_6.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_1_0_r_0_7:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_1_0_r_0_7.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_1_0_r_0_8:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_1_0_r_0_8.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_1_0_r_0_9:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_1_0_r_0_9.csv
+  save_args:
+    index: false
+bayes_estimation__s1.bayes_estimation_difficulty_p_1_0_r_1_0:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_1_0_r_1_0.csv
+  save_args:
+    index: false
+
+# Resumen global Bayes vs dificultades reales
+bayes_estimation__s1.bayes_estimation_summary:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/bayes_estimation__s1/bayes_estimation_summary.csv
+  save_args:
+    index: false

@@ -22,3 +22,13 @@ sample__s1:
     # n_total se toma de student_parameters.number_of_students
     percents: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
 
+  # Hiperparámetros para estimación bayesiana (PyMC)
+  bayes_estimation:
+    draws: 1000         # muestras por cadena
+    tune: 1000          # pasos de calentamiento
+    chains: 2           # número de cadenas
+    target_accept: 0.95 # tasa de aceptación objetivo para NUTS
+    method: "mcmc"      # por ahora solo MCMC
+    # sigma del prior de b: por defecto se usa sqrt(test_parameters.stat_difficulty.variance)
+    sigma_prior_override: null  # si se especifica, usar este valor en lugar del default
+
