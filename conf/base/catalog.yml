@@ -138,3 +138,62 @@ auto_pred__s1.pred_discrimination_summary:
   filepath: data/08_reporting/auto_pred__s1/pred_discrimination_summary.csv
   save_args:
     index: false
+
+# Salidas MMLE estimation por máscara (S1)
+mmle_estimation__s1.mmle_estimation_difficulty_p_0_1:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/mmle_estimation__s1/mmle_estimation_difficulty_p_0_1.csv
+  save_args:
+    index: false
+mmle_estimation__s1.mmle_estimation_difficulty_p_0_2:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/mmle_estimation__s1/mmle_estimation_difficulty_p_0_2.csv
+  save_args:
+    index: false
+mmle_estimation__s1.mmle_estimation_difficulty_p_0_3:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/mmle_estimation__s1/mmle_estimation_difficulty_p_0_3.csv
+  save_args:
+    index: false
+mmle_estimation__s1.mmle_estimation_difficulty_p_0_4:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/mmle_estimation__s1/mmle_estimation_difficulty_p_0_4.csv
+  save_args:
+    index: false
+mmle_estimation__s1.mmle_estimation_difficulty_p_0_5:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/mmle_estimation__s1/mmle_estimation_difficulty_p_0_5.csv
+  save_args:
+    index: false
+mmle_estimation__s1.mmle_estimation_difficulty_p_0_6:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/mmle_estimation__s1/mmle_estimation_difficulty_p_0_6.csv
+  save_args:
+    index: false
+mmle_estimation__s1.mmle_estimation_difficulty_p_0_7:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/mmle_estimation__s1/mmle_estimation_difficulty_p_0_7.csv
+  save_args:
+    index: false
+mmle_estimation__s1.mmle_estimation_difficulty_p_0_8:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/mmle_estimation__s1/mmle_estimation_difficulty_p_0_8.csv
+  save_args:
+    index: false
+mmle_estimation__s1.mmle_estimation_difficulty_p_0_9:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/mmle_estimation__s1/mmle_estimation_difficulty_p_0_9.csv
+  save_args:
+    index: false
+mmle_estimation__s1.mmle_estimation_difficulty_p_1_0:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/mmle_estimation__s1/mmle_estimation_difficulty_p_1_0.csv
+  save_args:
+    index: false
+
+# Resumen global MMLE vs dificultades reales
+mmle_estimation__s1.mmle_estimation_summary:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/mmle_estimation__s1/mmle_estimation_summary.csv
+  save_args:
+    index: false

@@ -12,6 +12,9 @@ from analisis_calidad_estimacion_1pl_bayesiana.pipelines.auto_pred_s1 import (
 from analisis_calidad_estimacion_1pl_bayesiana.pipelines.subsample_s1 import (
     create_pipeline as create_subsample_s1,
 )
+from analisis_calidad_estimacion_1pl_bayesiana.pipelines.mmle_estimation_s1 import (
+    create_pipeline as create_mmle_estimation_s1,
+)
 
 
 def register_pipelines() -> dict[str, Pipeline]:
@@ -47,11 +50,34 @@ def register_pipelines() -> dict[str, Pipeline]:
         },
     ).tag({"sample", "sample_1", "random_subsample"})
 
-    both = (s1_ns + auto_pred_ns + subsample_ns)
+    mmle = create_mmle_estimation_s1()
+    mmle_ns = pipeline(
+        mmle,
+        namespace="mmle_estimation__s1",
+        inputs={
+            # datos originales
+            "sample__s1.responses": "sample__s1.responses",
+            "sample__s1.difficulties": "sample__s1.difficulties",
+            # máscaras de subsample
+            "subsample__s1.subsample_mask_p_0_1": "subsample__s1.subsample_mask_p_0_1",
+            "subsample__s1.subsample_mask_p_0_2": "subsample__s1.subsample_mask_p_0_2",
+            "subsample__s1.subsample_mask_p_0_3": "subsample__s1.subsample_mask_p_0_3",
+            "subsample__s1.subsample_mask_p_0_4": "subsample__s1.subsample_mask_p_0_4",
+            "subsample__s1.subsample_mask_p_0_5": "subsample__s1.subsample_mask_p_0_5",
+            "subsample__s1.subsample_mask_p_0_6": "subsample__s1.subsample_mask_p_0_6",
+            "subsample__s1.subsample_mask_p_0_7": "subsample__s1.subsample_mask_p_0_7",
+            "subsample__s1.subsample_mask_p_0_8": "subsample__s1.subsample_mask_p_0_8",
+            "subsample__s1.subsample_mask_p_0_9": "subsample__s1.subsample_mask_p_0_9",
+            "subsample__s1.subsample_mask_p_1_0": "subsample__s1.subsample_mask_p_1_0",
+        },
+    ).tag({"sample", "sample_1", "mmle", "estimation"})
+
+    all_pipes = s1_ns + auto_pred_ns + subsample_ns + mmle_ns
 
     return {
         "sample_s1": s1_ns,
         "auto_pred_s1": auto_pred_ns,
         "subsample_s1": subsample_ns,
-        "__default__": both,
+        "mmle_estimation_s1": mmle_ns,
+        "__default__": all_pipes,
     }
