@@ -12,3 +12,13 @@ sample__s1:
       variance: 1.0
   seed: 123
 
+  # Parámetros para pipelines hijos dentro de sample__s1
+  auto_pred:
+    r_levels: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+    sd_true: 1.0
+    sd_pred: 1.0
+
+  subsample:  # antes subsample__s1
+    # n_total se toma de student_parameters.number_of_students
+    percents: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+

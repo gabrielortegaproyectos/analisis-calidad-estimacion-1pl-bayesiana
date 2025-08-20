@@ -18,3 +18,123 @@ sample__s1.responses:
   filepath: data/02_intermediate/sample__s1/responses.csv
   save_args:
     index: false
+
+# Salidas del pipeline auto_pred__s1 (10 CSVs)
+auto_pred__s1.pred_difficulty_r_0_1:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/auto_pred__s1/pred_difficulty_r_0_1.csv
+  save_args:
+    index: false
+
+auto_pred__s1.pred_difficulty_r_0_2:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/auto_pred__s1/pred_difficulty_r_0_2.csv
+  save_args:
+    index: false
+
+auto_pred__s1.pred_difficulty_r_0_3:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/auto_pred__s1/pred_difficulty_r_0_3.csv
+  save_args:
+    index: false
+
+auto_pred__s1.pred_difficulty_r_0_4:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/auto_pred__s1/pred_difficulty_r_0_4.csv
+  save_args:
+    index: false
+
+auto_pred__s1.pred_difficulty_r_0_5:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/auto_pred__s1/pred_difficulty_r_0_5.csv
+  save_args:
+    index: false
+
+auto_pred__s1.pred_difficulty_r_0_6:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/auto_pred__s1/pred_difficulty_r_0_6.csv
+  save_args:
+    index: false
+
+auto_pred__s1.pred_difficulty_r_0_7:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/auto_pred__s1/pred_difficulty_r_0_7.csv
+  save_args:
+    index: false
+
+auto_pred__s1.pred_difficulty_r_0_8:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/auto_pred__s1/pred_difficulty_r_0_8.csv
+  save_args:
+    index: false
+
+auto_pred__s1.pred_difficulty_r_0_9:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/auto_pred__s1/pred_difficulty_r_0_9.csv
+  save_args:
+    index: false
+
+auto_pred__s1.pred_difficulty_r_1_0:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/auto_pred__s1/pred_difficulty_r_1_0.csv
+  save_args:
+    index: false
+
+# Máscaras de subsample aleatorio (S1)
+subsample__s1.subsample_mask_p_0_1:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/subsample__s1/subsample_mask_p_0_1.csv
+  save_args:
+    index: false
+subsample__s1.subsample_mask_p_0_2:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/subsample__s1/subsample_mask_p_0_2.csv
+  save_args:
+    index: false
+subsample__s1.subsample_mask_p_0_3:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/subsample__s1/subsample_mask_p_0_3.csv
+  save_args:
+    index: false
+subsample__s1.subsample_mask_p_0_4:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/subsample__s1/subsample_mask_p_0_4.csv
+  save_args:
+    index: false
+subsample__s1.subsample_mask_p_0_5:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/subsample__s1/subsample_mask_p_0_5.csv
+  save_args:
+    index: false
+subsample__s1.subsample_mask_p_0_6:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/subsample__s1/subsample_mask_p_0_6.csv
+  save_args:
+    index: false
+subsample__s1.subsample_mask_p_0_7:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/subsample__s1/subsample_mask_p_0_7.csv
+  save_args:
+    index: false
+subsample__s1.subsample_mask_p_0_8:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/subsample__s1/subsample_mask_p_0_8.csv
+  save_args:
+    index: false
+subsample__s1.subsample_mask_p_0_9:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/subsample__s1/subsample_mask_p_0_9.csv
+  save_args:
+    index: false
+subsample__s1.subsample_mask_p_1_0:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/subsample__s1/subsample_mask_p_1_0.csv
+  save_args:
+    index: false
+
+# Resumen de discriminación lograda
+auto_pred__s1.pred_discrimination_summary:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/auto_pred__s1/pred_discrimination_summary.csv
+  save_args:
+    index: false
