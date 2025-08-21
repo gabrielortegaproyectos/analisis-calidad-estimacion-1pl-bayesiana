@@ -18,6 +18,9 @@ from analisis_calidad_estimacion_1pl_bayesiana.pipelines.mmle_estimation_s1 impo
 from analisis_calidad_estimacion_1pl_bayesiana.pipelines.bayes_estimation_s1 import (
     create_pipeline as create_bayes_estimation_s1,
 )
+from analisis_calidad_estimacion_1pl_bayesiana.pipelines.reporting_s1 import (
+    create_pipeline as create_reporting_s1,
+)
 
 
 def register_pipelines() -> dict[str, Pipeline]:
@@ -120,7 +123,17 @@ def register_pipelines() -> dict[str, Pipeline]:
         },
     ).tag({"sample", "sample_1", "bayes", "estimation"})
 
-    all_pipes = s1_ns + auto_pred_ns + subsample_ns + mmle_ns + bayes_ns
+    reporting = create_reporting_s1()
+    reporting_ns = pipeline(
+        reporting,
+        namespace="reporting__s1",
+        inputs={
+            "mmle_estimation__s1.mmle_estimation_summary": "mmle_estimation__s1.mmle_estimation_summary",
+            "bayes_estimation__s1.bayes_estimation_summary": "bayes_estimation__s1.bayes_estimation_summary",
+        },
+    ).tag({"sample", "sample_1", "reporting"})
+
+    all_pipes = s1_ns + auto_pred_ns + subsample_ns + mmle_ns + bayes_ns + reporting_ns
 
     return {
         "sample_s1": s1_ns,
@@ -128,5 +141,6 @@ def register_pipelines() -> dict[str, Pipeline]:
         "subsample_s1": subsample_ns,
         "mmle_estimation_s1": mmle_ns,
         "bayes_estimation_s1": bayes_ns,
+        "reporting_s1": reporting_ns,
         "__default__": all_pipes,
     }

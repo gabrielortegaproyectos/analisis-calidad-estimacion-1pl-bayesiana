@@ -662,11 +662,6 @@ bayes_estimation__s1.bayes_estimation_difficulty_p_0_9_r_0_9:
   filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_9_r_0_9.csv
   save_args:
     index: false
-bayes_estimation__s1.bayes_estimation_difficulty_p_0_9_r_1_0:
-  type: pandas.CSVDataset
-  filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_0_9_r_1_0.csv
-  save_args:
-    index: false
 bayes_estimation__s1.bayes_estimation_difficulty_p_1_0_r_0_1:
   type: pandas.CSVDataset
   filepath: data/07_model_output/bayes_estimation__s1/bayes_estimation_difficulty_p_1_0_r_0_1.csv
@@ -724,3 +719,28 @@ bayes_estimation__s1.bayes_estimation_summary:
   filepath: data/08_reporting/bayes_estimation__s1/bayes_estimation_summary.csv
   save_args:
     index: false
+
+# Reportes/figuras percent vs métricas (S1)
+reporting__s1.mmle_fig_percent_vs_mse:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/mmle_estimation__s1/fig_percent_vs_mse.png
+
+reporting__s1.mmle_fig_percent_vs_r2:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/mmle_estimation__s1/fig_percent_vs_r2.png
+
+reporting__s1.bayes_fig_percent_vs_mse:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/bayes_estimation__s1/fig_percent_vs_mse.png
+
+reporting__s1.bayes_fig_percent_vs_r2:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/bayes_estimation__s1/fig_percent_vs_r2.png
+
+reporting__s1.bayes_r2_with_mmle_hlines:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/bayes_estimation__s1/fig_percent_vs_r2_with_mmle_baselines.png
+
+reporting__s1.bayes_mse_with_mmle_hlines:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/bayes_estimation__s1/fig_percent_vs_mse_with_mmle_baselines.png
