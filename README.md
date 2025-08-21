@@ -32,6 +32,8 @@ Este proyecto incluye un sitio web completo desplegado en GitHub Pages que prese
 
 ### 🌐 **[Ver Sitio Web](https://gabrielortegaproyectos.github.io/analisis-calidad-estimacion-1pl-bayesiana/)**
 
+### 🧭 **[Ver Pipeline Interactivo (Kedro‑Viz)](https://gabrielortegaproyectos.github.io/analisis-calidad-estimacion-1pl-bayesiana/pipeline_visualization/index.html?pid=__default__&expandAllPipelines=false&types=parameters)**
+
 #### Contenido del sitio:
 - **Página Principal**: Descripción completa del experimento, metodología y tecnologías
 - **Pipeline Interactivo**: Visualización en tiempo real del pipeline con Kedro-Viz
