@@ -1,0 +1,16 @@
+{
+  "code": "def simulate_responses_s1(\n    item_difficulties: pd.DataFrame,\n    person_abilities: pd.DataFrame,\n    seed: int | None = None,\n) -> pd.DataFrame:\n    \"\"\"Simula respuestas binarias con modelo 1PL (discriminación=1).\"\"\"\n    if seed is not None:\n        np.random.seed(seed + 2 if seed is not None else None)\n\n    item_difficulties = item_difficulties.sort_values(\"item_id\")\n    person_abilities = person_abilities.sort_values(\"person_id\")\n\n    n_items = int(item_difficulties.shape[0])\n    diffs = item_difficulties[\"difficulty\"].to_numpy()\n\n    rows = []\n    for pid, ability in zip(person_abilities[\"person_id\"], person_abilities[\"ability\" ]):\n        logits = ability - diffs\n        probs = 1.0 / (1.0 + np.exp(-logits))\n        responses = (np.random.rand(n_items) < probs).astype(int)\n        rows.append(np.concatenate([[pid], responses]))\n\n    cols = [\"person_id\"] + [f\"item_{i}\" for i in range(1, n_items + 1)]\n    responses_df = pd.DataFrame(rows, columns=cols)\n    logger.info(\"[s1] Simulated responses: persons=%d, items=%d\", len(person_abilities), n_items)\n    return responses_df\n",
+  "filepath": "analisis-calidad-estimacion-1pl-bayesiana/src/analisis_calidad_estimacion_1pl_bayesiana/pipelines/sample_s1/nodes.py",
+  "parameters": {
+    "sample__s1.seed": 123
+  },
+  "run_command": "kedro run --to-nodes='sample__s1.s1_simulate_responses'",
+  "inputs": [
+    "sample__s1.difficulties",
+    "sample__s1.abilities",
+    "params:sample__s1.seed"
+  ],
+  "outputs": [
+    "sample__s1.responses"
+  ]
+}

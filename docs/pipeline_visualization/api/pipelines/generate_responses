@@ -5,8 +5,8 @@
       "name": "generate_parameters_node",
       "tags": [],
       "pipelines": [
-        "generate_responses",
-        "__default__"
+        "__default__",
+        "generate_responses"
       ],
       "type": "task",
       "modular_pipelines": null,
@@ -20,8 +20,8 @@
       "name": "params:number_of_questions",
       "tags": [],
       "pipelines": [
-        "generate_responses",
-        "__default__"
+        "__default__",
+        "generate_responses"
       ],
       "type": "parameters",
       "modular_pipelines": null,
@@ -34,8 +34,8 @@
       "name": "params:number_of_students",
       "tags": [],
       "pipelines": [
-        "generate_responses",
-        "__default__"
+        "__default__",
+        "generate_responses"
       ],
       "type": "parameters",
       "modular_pipelines": null,
@@ -48,36 +48,44 @@
       "name": "difficulties_cience_1",
       "tags": [],
       "pipelines": [
-        "generate_responses",
-        "__default__"
+        "__default__",
+        "generate_responses"
       ],
       "type": "data",
       "modular_pipelines": null,
       "layer": null,
       "dataset_type": "pandas.csv_dataset.CSVDataset",
-      "stats": null
+      "stats": {
+        "rows": 80,
+        "columns": 1,
+        "file_size": 1577
+      }
     },
     {
       "id": "1512d5e2",
       "name": "abilities_cience_1",
       "tags": [],
       "pipelines": [
-        "generate_responses",
-        "__default__"
+        "__default__",
+        "generate_responses"
       ],
       "type": "data",
       "modular_pipelines": null,
       "layer": null,
       "dataset_type": "pandas.csv_dataset.CSVDataset",
-      "stats": null
+      "stats": {
+        "rows": 1000,
+        "columns": 1,
+        "file_size": 19668
+      }
     },
     {
       "id": "f5617d53",
       "name": "simulate_responses_node",
       "tags": [],
       "pipelines": [
-        "generate_responses",
-        "__default__"
+        "__default__",
+        "generate_responses"
       ],
       "type": "task",
       "modular_pipelines": null,
@@ -88,14 +96,18 @@
       "name": "responses_cience_1",
       "tags": [],
       "pipelines": [
-        "generate_responses",
-        "__default__"
+        "__default__",
+        "generate_responses"
       ],
       "type": "data",
       "modular_pipelines": null,
       "layer": null,
       "dataset_type": "pandas.csv_dataset.CSVDataset",
-      "stats": null
+      "stats": {
+        "rows": 1000,
+        "columns": 80,
+        "file_size": 320631
+      }
     }
   ],
   "edges": [
@@ -108,12 +120,16 @@
       "target": "06287146"
     },
     {
-      "source": "73e790d7",
-      "target": "1512d5e2"
+      "source": "44469d65",
+      "target": "f5617d53"
     },
     {
       "source": "1a0a0ec9",
       "target": "73e790d7"
+    },
+    {
+      "source": "73e790d7",
+      "target": "1512d5e2"
     },
     {
       "source": "73e790d7",
@@ -122,10 +138,6 @@
     {
       "source": "ca4f931c",
       "target": "73e790d7"
-    },
-    {
-      "source": "44469d65",
-      "target": "f5617d53"
     }
   ],
   "layers": [],
@@ -148,31 +160,23 @@
       "outputs": [],
       "children": [
         {
+          "id": "f5617d53",
+          "type": "task"
+        },
+        {
           "id": "ca4f931c",
           "type": "data"
         },
         {
           "id": "1a0a0ec9",
-          "type": "data"
+          "type": "parameters"
         },
         {
           "id": "1512d5e2",
           "type": "data"
         },
         {
-          "id": "f5617d53",
-          "type": "task"
-        },
-        {
-          "id": "ca4f931c",
-          "type": "parameters"
-        },
-        {
-          "id": "1a0a0ec9",
-          "type": "parameters"
-        },
-        {
-          "id": "44469d65",
+          "id": "06287146",
           "type": "data"
         },
         {
@@ -180,8 +184,16 @@
           "type": "task"
         },
         {
-          "id": "06287146",
+          "id": "44469d65",
           "type": "data"
+        },
+        {
+          "id": "1a0a0ec9",
+          "type": "data"
+        },
+        {
+          "id": "ca4f931c",
+          "type": "parameters"
         }
       ]
     }

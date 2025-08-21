@@ -29,6 +29,7 @@ version = "0.1"
 source = { editable = "." }
 dependencies = [
     { name = "arviz" },
+    { name = "girth" },
     { name = "graphviz" },
     { name = "ipython" },
     { name = "jupyterlab" },
@@ -62,6 +63,7 @@ docs = [
 requires-dist = [
     { name = "arviz", specifier = ">=0.22.0" },
     { name = "docutils", marker = "extra == 'docs'", specifier = "<0.21" },
+    { name = "girth", specifier = ">=0.3.0" },
     { name = "graphviz" },
     { name = "ipykernel", marker = "extra == 'docs'", specifier = ">=5.3,<7.0" },
     { name = "ipython", specifier = ">=8.10" },
@@ -734,6 +736,19 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/8b/02/0835e6ab9cfc03916fe3f78c0956cfcdb6ff2669ffa6651065d5ebf7fc98/fsspec-2025.7.0.tar.gz", hash = "sha256:786120687ffa54b8283d942929540d8bc5ccfa820deb555a2b5d0ed2b737bf58", size = 304432 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/2f/e0/014d5d9d7a4564cf1c40b5039bc882db69fd881111e03ab3657ac0b218e2/fsspec-2025.7.0-py3-none-any.whl", hash = "sha256:8b012e39f63c7d5f10474de957f3ab793b47b45ae7d39f2fb735f8bbe25c0e21", size = 199597 },
+]
+
+[[package]]
+name = "girth"
+version = "0.8.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "scipy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f4/8f/39249a3ccf42375a9543c6cdafc6bfacddba0e4878b88fc8c51a49e7a592/girth-0.8.0.tar.gz", hash = "sha256:9c4f350ec3492b07908d0e9dda8326aedf6805665bfb31c6b85ad19fac9e6c9e", size = 43394 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d3/cc/e324f0cf43490949a8b20f23c311574251b4770bd0f9c15578a8035e7a91/girth-0.8.0-py3-none-any.whl", hash = "sha256:667ce19921f6290a788ac586a15f324fd9d37269302090a802f69348022241ce", size = 67682 },
 ]
 
 [[package]]

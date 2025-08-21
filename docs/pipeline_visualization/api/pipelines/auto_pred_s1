@@ -1,0 +1,914 @@
+{
+  "nodes": [
+    {
+      "id": "d92fddf8",
+      "name": "params:sample__s1.seed",
+      "tags": [
+        "random_subsample",
+        "estimation",
+        "sample",
+        "sample_1",
+        "auto_pred",
+        "bayes"
+      ],
+      "pipelines": [
+        "sample_s1",
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "parameters",
+      "modular_pipelines": null,
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    },
+    {
+      "id": "3f279825",
+      "name": "sample__s1.difficulties",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "auto_pred",
+        "bayes"
+      ],
+      "pipelines": [
+        "sample_s1",
+        "bayes_estimation_s1",
+        "auto_pred_s1",
+        "mmle_estimation_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "sample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "c0105941",
+      "name": "s1_generate_pred_for_r_0_1",
+      "tags": [
+        "sample",
+        "sample_1",
+        "auto_pred"
+      ],
+      "pipelines": [
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "parameters": {
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "f08e228f",
+      "name": "auto_pred__s1.pred_difficulty_r_0_1",
+      "tags": [
+        "auto_pred",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "7ba8e20e",
+      "name": "s1_generate_pred_for_r_0_2",
+      "tags": [
+        "sample",
+        "sample_1",
+        "auto_pred"
+      ],
+      "pipelines": [
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "parameters": {
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "c19edceb",
+      "name": "auto_pred__s1.pred_difficulty_r_0_2",
+      "tags": [
+        "auto_pred",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "c241e82f",
+      "name": "s1_generate_pred_for_r_0_3",
+      "tags": [
+        "sample",
+        "sample_1",
+        "auto_pred"
+      ],
+      "pipelines": [
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "parameters": {
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "0834484d",
+      "name": "auto_pred__s1.pred_difficulty_r_0_3",
+      "tags": [
+        "auto_pred",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "bebd5b28",
+      "name": "s1_generate_pred_for_r_0_4",
+      "tags": [
+        "sample",
+        "sample_1",
+        "auto_pred"
+      ],
+      "pipelines": [
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "parameters": {
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "65ce5c92",
+      "name": "auto_pred__s1.pred_difficulty_r_0_4",
+      "tags": [
+        "auto_pred",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "e9517154",
+      "name": "s1_generate_pred_for_r_0_5",
+      "tags": [
+        "sample",
+        "sample_1",
+        "auto_pred"
+      ],
+      "pipelines": [
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "parameters": {
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "9748f310",
+      "name": "auto_pred__s1.pred_difficulty_r_0_5",
+      "tags": [
+        "auto_pred",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "16855079",
+      "name": "s1_generate_pred_for_r_0_6",
+      "tags": [
+        "sample",
+        "sample_1",
+        "auto_pred"
+      ],
+      "pipelines": [
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "parameters": {
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "a93fc87e",
+      "name": "auto_pred__s1.pred_difficulty_r_0_6",
+      "tags": [
+        "auto_pred",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "9bbfd3e3",
+      "name": "s1_generate_pred_for_r_0_7",
+      "tags": [
+        "sample",
+        "sample_1",
+        "auto_pred"
+      ],
+      "pipelines": [
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "parameters": {
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "0782d7fc",
+      "name": "auto_pred__s1.pred_difficulty_r_0_7",
+      "tags": [
+        "auto_pred",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "59eead10",
+      "name": "s1_generate_pred_for_r_0_8",
+      "tags": [
+        "sample",
+        "sample_1",
+        "auto_pred"
+      ],
+      "pipelines": [
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "parameters": {
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "1b9d3d26",
+      "name": "auto_pred__s1.pred_difficulty_r_0_8",
+      "tags": [
+        "auto_pred",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "0c7f636c",
+      "name": "s1_generate_pred_for_r_0_9",
+      "tags": [
+        "sample",
+        "sample_1",
+        "auto_pred"
+      ],
+      "pipelines": [
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "parameters": {
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "4bc0e5bd",
+      "name": "auto_pred__s1.pred_difficulty_r_0_9",
+      "tags": [
+        "auto_pred",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "47990825",
+      "name": "s1_generate_pred_for_r_1_0",
+      "tags": [
+        "sample",
+        "sample_1",
+        "auto_pred"
+      ],
+      "pipelines": [
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "parameters": {
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "83560628",
+      "name": "auto_pred__s1.pred_difficulty_r_1_0",
+      "tags": [
+        "auto_pred",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "f76d373c",
+      "name": "s1_summarize_pred_discrimination",
+      "tags": [
+        "sample",
+        "sample_1",
+        "auto_pred"
+      ],
+      "pipelines": [
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "d9ff9985",
+      "name": "auto_pred__s1.pred_discrimination_summary",
+      "tags": [
+        "sample",
+        "sample_1",
+        "auto_pred"
+      ],
+      "pipelines": [
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "auto_pred__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "auto_pred__s1",
+      "name": "auto_pred__s1",
+      "tags": [
+        "sample",
+        "sample_1",
+        "auto_pred"
+      ],
+      "pipelines": [
+        "auto_pred_s1"
+      ],
+      "type": "modularPipeline",
+      "modular_pipelines": null,
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "d92fddf8",
+      "target": "auto_pred__s1"
+    },
+    {
+      "source": "0782d7fc",
+      "target": "f76d373c"
+    },
+    {
+      "source": "1b9d3d26",
+      "target": "f76d373c"
+    },
+    {
+      "source": "3f279825",
+      "target": "47990825"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "59eead10"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "e9517154"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "bebd5b28"
+    },
+    {
+      "source": "3f279825",
+      "target": "9bbfd3e3"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "0c7f636c"
+    },
+    {
+      "source": "3f279825",
+      "target": "7ba8e20e"
+    },
+    {
+      "source": "bebd5b28",
+      "target": "65ce5c92"
+    },
+    {
+      "source": "9748f310",
+      "target": "f76d373c"
+    },
+    {
+      "source": "3f279825",
+      "target": "auto_pred__s1"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "c0105941"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "16855079"
+    },
+    {
+      "source": "c19edceb",
+      "target": "f76d373c"
+    },
+    {
+      "source": "auto_pred__s1",
+      "target": "d9ff9985"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "c241e82f"
+    },
+    {
+      "source": "3f279825",
+      "target": "bebd5b28"
+    },
+    {
+      "source": "3f279825",
+      "target": "59eead10"
+    },
+    {
+      "source": "3f279825",
+      "target": "e9517154"
+    },
+    {
+      "source": "59eead10",
+      "target": "1b9d3d26"
+    },
+    {
+      "source": "f08e228f",
+      "target": "f76d373c"
+    },
+    {
+      "source": "0834484d",
+      "target": "f76d373c"
+    },
+    {
+      "source": "7ba8e20e",
+      "target": "c19edceb"
+    },
+    {
+      "source": "16855079",
+      "target": "a93fc87e"
+    },
+    {
+      "source": "3f279825",
+      "target": "0c7f636c"
+    },
+    {
+      "source": "9bbfd3e3",
+      "target": "0782d7fc"
+    },
+    {
+      "source": "3f279825",
+      "target": "c0105941"
+    },
+    {
+      "source": "3f279825",
+      "target": "16855079"
+    },
+    {
+      "source": "83560628",
+      "target": "f76d373c"
+    },
+    {
+      "source": "0c7f636c",
+      "target": "4bc0e5bd"
+    },
+    {
+      "source": "3f279825",
+      "target": "c241e82f"
+    },
+    {
+      "source": "47990825",
+      "target": "83560628"
+    },
+    {
+      "source": "3f279825",
+      "target": "f76d373c"
+    },
+    {
+      "source": "4bc0e5bd",
+      "target": "f76d373c"
+    },
+    {
+      "source": "e9517154",
+      "target": "9748f310"
+    },
+    {
+      "source": "f76d373c",
+      "target": "d9ff9985"
+    },
+    {
+      "source": "c0105941",
+      "target": "f08e228f"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "47990825"
+    },
+    {
+      "source": "65ce5c92",
+      "target": "f76d373c"
+    },
+    {
+      "source": "a93fc87e",
+      "target": "f76d373c"
+    },
+    {
+      "source": "c241e82f",
+      "target": "0834484d"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "9bbfd3e3"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "7ba8e20e"
+    }
+  ],
+  "layers": [],
+  "tags": [
+    {
+      "id": "auto_pred",
+      "name": "auto_pred"
+    },
+    {
+      "id": "bayes",
+      "name": "bayes"
+    },
+    {
+      "id": "comparison",
+      "name": "comparison"
+    },
+    {
+      "id": "estimation",
+      "name": "estimation"
+    },
+    {
+      "id": "mmle",
+      "name": "mmle"
+    },
+    {
+      "id": "random_subsample",
+      "name": "random_subsample"
+    },
+    {
+      "id": "reporting",
+      "name": "reporting"
+    },
+    {
+      "id": "sample",
+      "name": "sample"
+    },
+    {
+      "id": "sample_1",
+      "name": "sample_1"
+    }
+  ],
+  "pipelines": [
+    {
+      "id": "sample_s1",
+      "name": "sample_s1"
+    },
+    {
+      "id": "auto_pred_s1",
+      "name": "auto_pred_s1"
+    },
+    {
+      "id": "subsample_s1",
+      "name": "subsample_s1"
+    },
+    {
+      "id": "mmle_estimation_s1",
+      "name": "mmle_estimation_s1"
+    },
+    {
+      "id": "bayes_estimation_s1",
+      "name": "bayes_estimation_s1"
+    },
+    {
+      "id": "reporting_s1",
+      "name": "reporting_s1"
+    },
+    {
+      "id": "__default__",
+      "name": "__default__"
+    }
+  ],
+  "modular_pipelines": {
+    "__root__": {
+      "id": "__root__",
+      "name": "__root__",
+      "inputs": [],
+      "outputs": [],
+      "children": [
+        {
+          "id": "d92fddf8",
+          "type": "parameters"
+        },
+        {
+          "id": "3f279825",
+          "type": "data"
+        },
+        {
+          "id": "auto_pred__s1",
+          "type": "modularPipeline"
+        },
+        {
+          "id": "d9ff9985",
+          "type": "data"
+        }
+      ]
+    },
+    "auto_pred__s1": {
+      "id": "auto_pred__s1",
+      "name": "auto_pred__s1",
+      "inputs": [
+        "3f279825",
+        "d92fddf8"
+      ],
+      "outputs": [
+        "d9ff9985"
+      ],
+      "children": [
+        {
+          "id": "c19edceb",
+          "type": "data"
+        },
+        {
+          "id": "bebd5b28",
+          "type": "task"
+        },
+        {
+          "id": "f08e228f",
+          "type": "data"
+        },
+        {
+          "id": "47990825",
+          "type": "task"
+        },
+        {
+          "id": "0834484d",
+          "type": "data"
+        },
+        {
+          "id": "0c7f636c",
+          "type": "task"
+        },
+        {
+          "id": "83560628",
+          "type": "data"
+        },
+        {
+          "id": "4bc0e5bd",
+          "type": "data"
+        },
+        {
+          "id": "f76d373c",
+          "type": "task"
+        },
+        {
+          "id": "9bbfd3e3",
+          "type": "task"
+        },
+        {
+          "id": "7ba8e20e",
+          "type": "task"
+        },
+        {
+          "id": "e9517154",
+          "type": "task"
+        },
+        {
+          "id": "16855079",
+          "type": "task"
+        },
+        {
+          "id": "59eead10",
+          "type": "task"
+        },
+        {
+          "id": "c0105941",
+          "type": "task"
+        },
+        {
+          "id": "a93fc87e",
+          "type": "data"
+        },
+        {
+          "id": "65ce5c92",
+          "type": "data"
+        },
+        {
+          "id": "c241e82f",
+          "type": "task"
+        },
+        {
+          "id": "0782d7fc",
+          "type": "data"
+        },
+        {
+          "id": "1b9d3d26",
+          "type": "data"
+        },
+        {
+          "id": "9748f310",
+          "type": "data"
+        }
+      ]
+    }
+  },
+  "selected_pipeline": "auto_pred_s1"
+}

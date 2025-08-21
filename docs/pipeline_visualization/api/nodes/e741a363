@@ -1,0 +1,8 @@
+{
+  "parameters": {
+    "sample__s1.test_parameters.stat_difficulty": {
+      "mean": 0.55,
+      "variance": 0.457
+    }
+  }
+}

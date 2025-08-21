@@ -1,0 +1,8 @@
+{
+  "type": "pandas.csv_dataset.CSVDataset",
+  "filepath": "/home/gabriel/Escritorio/Proyectos/Proyectos_datos/Magister/analisis-calidad-estimacion-1pl-bayesiana/data/02_intermediate/auto_pred__s1/pred_difficulty_r_0_7.csv",
+  "run_command": "kedro run --to-outputs=auto_pred__s1.pred_difficulty_r_0_7",
+  "preview": null,
+  "preview_type": null,
+  "stats": null
+}

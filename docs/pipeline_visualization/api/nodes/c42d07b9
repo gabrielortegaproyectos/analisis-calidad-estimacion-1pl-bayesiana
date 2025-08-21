@@ -1,0 +1,8 @@
+{
+  "parameters": {
+    "sample__s1.student_parameters.theta_distribution": {
+      "mean": 0.0,
+      "variance": 1.0
+    }
+  }
+}

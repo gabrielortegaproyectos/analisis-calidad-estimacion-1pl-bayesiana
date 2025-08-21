@@ -1,0 +1,483 @@
+{
+  "nodes": [
+    {
+      "id": "15f05f2d",
+      "name": "mmle_estimation__s1.mmle_estimation_summary",
+      "tags": [
+        "reporting",
+        "mmle",
+        "estimation",
+        "sample",
+        "comparison",
+        "sample_1"
+      ],
+      "pipelines": [
+        "reporting_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": {
+        "rows": 10,
+        "columns": 8,
+        "file_size": 1223
+      }
+    },
+    {
+      "id": "e79f41f4",
+      "name": "bayes_estimation__s1.bayes_estimation_summary",
+      "tags": [
+        "reporting",
+        "estimation",
+        "sample",
+        "comparison",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "reporting_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "bayes_estimation__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": {
+        "rows": 100,
+        "columns": 9,
+        "file_size": 12735
+      }
+    },
+    {
+      "id": "b2c15832",
+      "name": "s1_plot_bayes_summary",
+      "tags": [
+        "reporting",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "reporting_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "reporting__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "43fee20e",
+      "name": "reporting__s1.bayes_fig_percent_vs_mse",
+      "tags": [
+        "reporting",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "reporting_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "reporting__s1"
+      ],
+      "layer": null,
+      "dataset_type": "matplotlib.matplotlib_writer.MatplotlibWriter",
+      "stats": null
+    },
+    {
+      "id": "09041cf4",
+      "name": "reporting__s1.bayes_fig_percent_vs_r2",
+      "tags": [
+        "reporting",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "reporting_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "reporting__s1"
+      ],
+      "layer": null,
+      "dataset_type": "matplotlib.matplotlib_writer.MatplotlibWriter",
+      "stats": null
+    },
+    {
+      "id": "5a449adc",
+      "name": "s1_plot_bayes_vs_mmle_baselines",
+      "tags": [
+        "reporting",
+        "sample",
+        "comparison",
+        "sample_1"
+      ],
+      "pipelines": [
+        "reporting_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "reporting__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "ebeab1f5",
+      "name": "reporting__s1.bayes_r2_with_mmle_hlines",
+      "tags": [
+        "reporting",
+        "sample",
+        "comparison",
+        "sample_1"
+      ],
+      "pipelines": [
+        "reporting_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "reporting__s1"
+      ],
+      "layer": null,
+      "dataset_type": "matplotlib.matplotlib_writer.MatplotlibWriter",
+      "stats": null
+    },
+    {
+      "id": "79e6eb86",
+      "name": "reporting__s1.bayes_mse_with_mmle_hlines",
+      "tags": [
+        "reporting",
+        "sample",
+        "comparison",
+        "sample_1"
+      ],
+      "pipelines": [
+        "reporting_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "reporting__s1"
+      ],
+      "layer": null,
+      "dataset_type": "matplotlib.matplotlib_writer.MatplotlibWriter",
+      "stats": null
+    },
+    {
+      "id": "c779a45b",
+      "name": "s1_plot_mmle_summary",
+      "tags": [
+        "reporting",
+        "mmle",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "reporting_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "reporting__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "b34aa114",
+      "name": "reporting__s1.mmle_fig_percent_vs_mse",
+      "tags": [
+        "reporting",
+        "mmle",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "reporting_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "reporting__s1"
+      ],
+      "layer": null,
+      "dataset_type": "matplotlib.matplotlib_writer.MatplotlibWriter",
+      "stats": null
+    },
+    {
+      "id": "05d92a25",
+      "name": "reporting__s1.mmle_fig_percent_vs_r2",
+      "tags": [
+        "reporting",
+        "mmle",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "reporting_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "reporting__s1"
+      ],
+      "layer": null,
+      "dataset_type": "matplotlib.matplotlib_writer.MatplotlibWriter",
+      "stats": null
+    },
+    {
+      "id": "reporting__s1",
+      "name": "reporting__s1",
+      "tags": [
+        "reporting",
+        "mmle",
+        "sample",
+        "comparison",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "reporting_s1"
+      ],
+      "type": "modularPipeline",
+      "modular_pipelines": null,
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "15f05f2d",
+      "target": "5a449adc"
+    },
+    {
+      "source": "5a449adc",
+      "target": "ebeab1f5"
+    },
+    {
+      "source": "15f05f2d",
+      "target": "c779a45b"
+    },
+    {
+      "source": "b2c15832",
+      "target": "43fee20e"
+    },
+    {
+      "source": "e79f41f4",
+      "target": "b2c15832"
+    },
+    {
+      "source": "e79f41f4",
+      "target": "reporting__s1"
+    },
+    {
+      "source": "15f05f2d",
+      "target": "reporting__s1"
+    },
+    {
+      "source": "reporting__s1",
+      "target": "79e6eb86"
+    },
+    {
+      "source": "reporting__s1",
+      "target": "09041cf4"
+    },
+    {
+      "source": "reporting__s1",
+      "target": "05d92a25"
+    },
+    {
+      "source": "reporting__s1",
+      "target": "ebeab1f5"
+    },
+    {
+      "source": "reporting__s1",
+      "target": "43fee20e"
+    },
+    {
+      "source": "reporting__s1",
+      "target": "b34aa114"
+    },
+    {
+      "source": "c779a45b",
+      "target": "05d92a25"
+    },
+    {
+      "source": "b2c15832",
+      "target": "09041cf4"
+    },
+    {
+      "source": "5a449adc",
+      "target": "79e6eb86"
+    },
+    {
+      "source": "e79f41f4",
+      "target": "5a449adc"
+    },
+    {
+      "source": "c779a45b",
+      "target": "b34aa114"
+    }
+  ],
+  "layers": [],
+  "tags": [
+    {
+      "id": "auto_pred",
+      "name": "auto_pred"
+    },
+    {
+      "id": "bayes",
+      "name": "bayes"
+    },
+    {
+      "id": "comparison",
+      "name": "comparison"
+    },
+    {
+      "id": "estimation",
+      "name": "estimation"
+    },
+    {
+      "id": "mmle",
+      "name": "mmle"
+    },
+    {
+      "id": "random_subsample",
+      "name": "random_subsample"
+    },
+    {
+      "id": "reporting",
+      "name": "reporting"
+    },
+    {
+      "id": "sample",
+      "name": "sample"
+    },
+    {
+      "id": "sample_1",
+      "name": "sample_1"
+    }
+  ],
+  "pipelines": [
+    {
+      "id": "sample_s1",
+      "name": "sample_s1"
+    },
+    {
+      "id": "auto_pred_s1",
+      "name": "auto_pred_s1"
+    },
+    {
+      "id": "subsample_s1",
+      "name": "subsample_s1"
+    },
+    {
+      "id": "mmle_estimation_s1",
+      "name": "mmle_estimation_s1"
+    },
+    {
+      "id": "bayes_estimation_s1",
+      "name": "bayes_estimation_s1"
+    },
+    {
+      "id": "reporting_s1",
+      "name": "reporting_s1"
+    },
+    {
+      "id": "__default__",
+      "name": "__default__"
+    }
+  ],
+  "modular_pipelines": {
+    "__root__": {
+      "id": "__root__",
+      "name": "__root__",
+      "inputs": [],
+      "outputs": [],
+      "children": [
+        {
+          "id": "reporting__s1",
+          "type": "modularPipeline"
+        },
+        {
+          "id": "79e6eb86",
+          "type": "data"
+        },
+        {
+          "id": "ebeab1f5",
+          "type": "data"
+        },
+        {
+          "id": "09041cf4",
+          "type": "data"
+        },
+        {
+          "id": "05d92a25",
+          "type": "data"
+        },
+        {
+          "id": "43fee20e",
+          "type": "data"
+        },
+        {
+          "id": "e79f41f4",
+          "type": "data"
+        },
+        {
+          "id": "15f05f2d",
+          "type": "data"
+        },
+        {
+          "id": "b34aa114",
+          "type": "data"
+        }
+      ]
+    },
+    "reporting__s1": {
+      "id": "reporting__s1",
+      "name": "reporting__s1",
+      "inputs": [
+        "e79f41f4",
+        "15f05f2d"
+      ],
+      "outputs": [
+        "43fee20e",
+        "ebeab1f5",
+        "05d92a25",
+        "79e6eb86",
+        "b34aa114",
+        "09041cf4"
+      ],
+      "children": [
+        {
+          "id": "b2c15832",
+          "type": "task"
+        },
+        {
+          "id": "c779a45b",
+          "type": "task"
+        },
+        {
+          "id": "5a449adc",
+          "type": "task"
+        }
+      ]
+    }
+  },
+  "selected_pipeline": "reporting_s1"
+}

@@ -1,0 +1,13 @@
+{
+  "code": "def mmle_estimate_for_mask(responses: pd.DataFrame, mask: pd.DataFrame) -> pd.DataFrame:\n    \"\"\"Aplica filtro por ``mask`` y estima dificultades con ``girth.rasch_mml``.\n\n    Devuelve DF con columnas: [item_id, est_difficulty].\n    \"\"\"\n    filtered = _filter_responses_with_mask(responses, mask)\n    n_selected = int(filtered.shape[0])\n    X_items_by_persons = _responses_to_items_x_persons_matrix(filtered)\n\n    if n_selected < 2:\n        logger.warning(\"[mmle_s1] Muy pocos participantes seleccionados: %d\", n_selected)\n\n    try:\n        result: Dict[str, np.ndarray | float] = rasch_mml(X_items_by_persons, discrimination=1)\n        diffs = np.asarray(result[\"Difficulty\"], dtype=float)\n        # Alineamos con item_id = 1..N (como en sample__s1)\n        out = pd.DataFrame({\n            \"item_id\": np.arange(1, diffs.size + 1, dtype=int),\n            \"est_difficulty\": diffs,\n        })\n        logger.info(\"[mmle_s1] Estimación OK: persons=%d, items=%d\", n_selected, diffs.size)\n        return out\n    except Exception as ex:  # pragma: no cover\n        logger.exception(\"[mmle_s1] Error en rasch_mml con persons=%d: %s\", n_selected, ex)\n        # Devuelve NaNs para mantener el flujo\n        n_items = filtered.shape[1] - 1\n        return pd.DataFrame({\n            \"item_id\": np.arange(1, n_items + 1, dtype=int),\n            \"est_difficulty\": np.full((n_items,), np.nan, dtype=float),\n        })\n",
+  "filepath": "analisis-calidad-estimacion-1pl-bayesiana/src/analisis_calidad_estimacion_1pl_bayesiana/pipelines/mmle_estimation_s1/nodes.py",
+  "parameters": {},
+  "run_command": "kedro run --to-nodes='mmle_estimation__s1.s1_mmle_estimate_for_subsample_mask_p_0_1'",
+  "inputs": [
+    "sample__s1.responses",
+    "subsample__s1.subsample_mask_p_0_1"
+  ],
+  "outputs": [
+    "mmle_estimation__s1.mmle_estimation_difficulty_p_0_1"
+  ]
+}

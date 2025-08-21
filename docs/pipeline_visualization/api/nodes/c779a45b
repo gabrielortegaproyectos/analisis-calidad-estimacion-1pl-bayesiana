@@ -1,0 +1,13 @@
+{
+  "code": "def plot_mmle_summary(mmle_summary: pd.DataFrame) -> dict:\n    \"\"\"Genera figuras percent vs MSE y percent vs R2 para MMLE.\n\n    Espera columnas: [percent, mse, r2].\n    Devuelve dict con claves: mmle_fig_percent_vs_mse, mmle_fig_percent_vs_r2\n    \"\"\"\n    figs = {}\n    figs[\"mmle_fig_percent_vs_mse\"] = _plot_metric_vs_percent(mmle_summary, \"mse\", \"MMLE: percent vs MSE\")\n    figs[\"mmle_fig_percent_vs_r2\"] = _plot_metric_vs_percent(mmle_summary, \"r2\", \"MMLE: percent vs R2\")\n    return figs\n",
+  "filepath": "analisis-calidad-estimacion-1pl-bayesiana/src/analisis_calidad_estimacion_1pl_bayesiana/pipelines/reporting_s1/nodes.py",
+  "parameters": {},
+  "run_command": "kedro run --to-nodes='reporting__s1.s1_plot_mmle_summary'",
+  "inputs": [
+    "mmle_estimation__s1.mmle_estimation_summary"
+  ],
+  "outputs": [
+    "reporting__s1.mmle_fig_percent_vs_mse",
+    "reporting__s1.mmle_fig_percent_vs_r2"
+  ]
+}

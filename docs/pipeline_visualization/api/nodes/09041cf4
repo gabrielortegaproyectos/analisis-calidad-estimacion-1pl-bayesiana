@@ -1,0 +1,8 @@
+{
+  "type": "matplotlib.matplotlib_writer.MatplotlibWriter",
+  "filepath": "/home/gabriel/Escritorio/Proyectos/Proyectos_datos/Magister/analisis-calidad-estimacion-1pl-bayesiana/data/08_reporting/bayes_estimation__s1/fig_percent_vs_r2.png",
+  "run_command": "kedro run --to-outputs=reporting__s1.bayes_fig_percent_vs_r2",
+  "preview": null,
+  "preview_type": null,
+  "stats": null
+}

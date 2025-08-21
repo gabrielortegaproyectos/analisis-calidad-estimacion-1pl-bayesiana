@@ -1,0 +1,8 @@
+{
+  "type": "io.memory_dataset.MemoryDataset",
+  "filepath": null,
+  "run_command": "kedro run --to-outputs=bayes_estimation__s1.bayes_estimation_difficulty_p_0_9_r_1_0",
+  "preview": null,
+  "preview_type": null,
+  "stats": null
+}

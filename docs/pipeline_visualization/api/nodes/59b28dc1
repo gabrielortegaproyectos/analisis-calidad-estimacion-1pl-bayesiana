@@ -1,0 +1,29 @@
+{
+  "code": "def bayes_estimate_for_mask_and_prior(\n    responses: pd.DataFrame,\n    mask: pd.DataFrame,\n    prior_pred: pd.DataFrame,\n    sigma_prior_override: float | None,\n    base_stat_variance: float,\n    draws: int,\n    tune: int,\n    chains: int,\n    target_accept: float,\n    seed: int | None = None,\n) -> pd.DataFrame:\n    \"\"\"Estima b por MCMC con prior N(mu=prior_pred, sigma).\n\n    sigma = sigma_prior_override si no es None; si no, sqrt(base_stat_variance).\n    prior_pred: DF [item_id, predicted_difficulty]\n    Devuelve DF [item_id, est_bayes_difficulty]\n    \"\"\"\n    if pm is None:\n        raise RuntimeError(\"PyMC no está instalado en el entorno.\")\n\n    filt = _filter_responses_with_mask(responses, mask)\n    Y = _responses_matrix(filt)  # persons x items\n    n_persons, n_items = int(Y.shape[0]), int(Y.shape[1])\n\n    pred = prior_pred.sort_values(\"item_id\").reset_index(drop=True)\n    mu_b = pred[\"predicted_difficulty\"].to_numpy(dtype=float)\n    if mu_b.shape[0] != n_items:\n        # alinear si hay discrepancia\n        item_cols = [c for c in filt.columns if c != \"person_id\"]\n        item_ids = np.arange(1, len(item_cols) + 1, dtype=int)\n        pred2 = pd.DataFrame({\"item_id\": item_ids}).merge(pred, on=\"item_id\", how=\"left\")\n        mu_b = pred2[\"predicted_difficulty\"].to_numpy(dtype=float)\n\n    sigma_prior_b = float(sigma_prior_override) if sigma_prior_override is not None else float(np.sqrt(max(base_stat_variance, 0.0)))\n\n    coords = {\"person\": np.arange(n_persons), \"item\": np.arange(n_items)}\n\n    with pm.Model(coords=coords) as model:\n        theta = pm.Normal(\"theta\", mu=0.0, sigma=1.0, dims=\"person\")\n        b = pm.Normal(\"b\", mu=mu_b, sigma=sigma_prior_b, dims=\"item\")\n        lin = theta[:, None] - b[None, :]\n        p = pm.Deterministic(\"p\", pm.math.sigmoid(lin))\n        pm.Bernoulli(\"responses\", p=p, observed=Y)\n\n        idata = pm.sample(\n            draws=draws,\n            tune=tune,\n            chains=chains,\n            target_accept=float(target_accept),\n            random_seed=seed,\n            progressbar=False,\n            cores=min(chains, 2),\n        )\n\n    b_hat = idata.posterior[\"b\"].mean(dim=(\"chain\", \"draw\")).values\n    out = pd.DataFrame({\"item_id\": np.arange(1, n_items + 1, dtype=int), \"est_bayes_difficulty\": b_hat})\n    return out\n",
+  "filepath": "analisis-calidad-estimacion-1pl-bayesiana/src/analisis_calidad_estimacion_1pl_bayesiana/pipelines/bayes_estimation_s1/nodes.py",
+  "parameters": {
+    "sample__s1.bayes_estimation.sigma_prior_override": null,
+    "sample__s1.test_parameters.stat_difficulty.variance": 0.457,
+    "sample__s1.bayes_estimation.draws": 1000,
+    "sample__s1.bayes_estimation.tune": 1000,
+    "sample__s1.bayes_estimation.chains": 2,
+    "sample__s1.bayes_estimation.target_accept": 0.95,
+    "sample__s1.seed": 123
+  },
+  "run_command": "kedro run --to-nodes='bayes_estimation__s1.s1_bayes_estimate_p_0_2_r_0_6'",
+  "inputs": [
+    "sample__s1.responses",
+    "subsample__s1.subsample_mask_p_0_2",
+    "auto_pred__s1.pred_difficulty_r_0_6",
+    "params:sample__s1.bayes_estimation.sigma_prior_override",
+    "params:sample__s1.test_parameters.stat_difficulty.variance",
+    "params:sample__s1.bayes_estimation.draws",
+    "params:sample__s1.bayes_estimation.tune",
+    "params:sample__s1.bayes_estimation.chains",
+    "params:sample__s1.bayes_estimation.target_accept",
+    "params:sample__s1.seed"
+  ],
+  "outputs": [
+    "bayes_estimation__s1.bayes_estimation_difficulty_p_0_2_r_0_6"
+  ]
+}

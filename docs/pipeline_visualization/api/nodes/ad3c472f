@@ -1,0 +1,22 @@
+{
+  "code": "def summarize_mmle_estimation(\n    difficulties: pd.DataFrame,\n    **estimates: pd.DataFrame,\n) -> pd.DataFrame:\n    \"\"\"Compara dificultades estimadas vs verdaderas para cada máscara.\n\n    ``difficulties``: columnas [item_id, difficulty]\n    ``estimates``: kwargs con claves como 'est_p_0_1', valores DF [item_id, est_difficulty]\n    \"\"\"\n    true_df = difficulties.sort_values(\"item_id\").reset_index(drop=True)\n\n    rows: list[dict] = []\n    for key, est_df in sorted(estimates.items()):\n        # extrae el percent de la clave 'est_p_0_1' -> 0.1\n        try:\n            p_str = key.split(\"est_p_\")[-1]\n            percent = float(p_str.replace(\"_\", \".\"))\n        except Exception:\n            percent = float(\"nan\")\n\n        est_df = est_df.sort_values(\"item_id\").reset_index(drop=True)\n        merged = pd.merge(true_df, est_df, on=\"item_id\", how=\"inner\")\n        y_true = merged[\"difficulty\"].to_numpy(dtype=float)\n        y_hat = merged[\"est_difficulty\"].to_numpy(dtype=float)\n\n        if y_true.size < 2 or np.all(~np.isfinite(y_hat)):\n            r = np.nan\n            r2 = np.nan\n            mse = np.nan\n            mae = np.nan\n            bias = np.nan\n        else:\n            r = float(np.corrcoef(y_true, y_hat)[0, 1])\n            r2 = r * r\n            err = y_hat - y_true\n            mse = float(np.mean(err ** 2))\n            mae = float(np.mean(np.abs(err)))\n            bias = float(np.mean(err))\n\n        rows.append({\n            \"dataset_key\": key,\n            \"percent\": percent,\n            \"r\": r,\n            \"r2\": r2,\n            \"mse\": mse,\n            \"mae\": mae,\n            \"bias\": bias,\n            \"n_items\": int(y_true.size),\n        })\n\n    summary = pd.DataFrame(rows).sort_values(\"percent\").reset_index(drop=True)\n    logger.info(\"[mmle_s1] resumen estimación: %s\", summary.to_dict(orient=\"list\"))\n    return summary\n",
+  "filepath": "analisis-calidad-estimacion-1pl-bayesiana/src/analisis_calidad_estimacion_1pl_bayesiana/pipelines/mmle_estimation_s1/nodes.py",
+  "parameters": {},
+  "run_command": "kedro run --to-nodes='mmle_estimation__s1.s1_mmle_estimation_summary'",
+  "inputs": [
+    "sample__s1.difficulties",
+    "mmle_estimation__s1.mmle_estimation_difficulty_p_0_1",
+    "mmle_estimation__s1.mmle_estimation_difficulty_p_0_2",
+    "mmle_estimation__s1.mmle_estimation_difficulty_p_0_3",
+    "mmle_estimation__s1.mmle_estimation_difficulty_p_0_4",
+    "mmle_estimation__s1.mmle_estimation_difficulty_p_0_5",
+    "mmle_estimation__s1.mmle_estimation_difficulty_p_0_6",
+    "mmle_estimation__s1.mmle_estimation_difficulty_p_0_7",
+    "mmle_estimation__s1.mmle_estimation_difficulty_p_0_8",
+    "mmle_estimation__s1.mmle_estimation_difficulty_p_0_9",
+    "mmle_estimation__s1.mmle_estimation_difficulty_p_1_0"
+  ],
+  "outputs": [
+    "mmle_estimation__s1.mmle_estimation_summary"
+  ]
+}

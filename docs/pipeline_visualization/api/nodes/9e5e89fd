@@ -1,0 +1,16 @@
+{
+  "code": "def generate_random_subsample_mask(n_total: int, n_selected: int, seed: int | None = None) -> pd.DataFrame:\n    \"\"\"Genera una máscara aleatoria de 0/1 de largo ``n_total`` con ``n_selected`` unos.\n\n    Devuelve un DataFrame con una única columna ``mask`` y un índice de 0..n_total-1.\n    \"\"\"\n    if n_selected > n_total:\n        raise ValueError(f\"n_selected={n_selected} no puede ser mayor que n_total={n_total}\")\n\n    rng = np.random.default_rng(seed)\n    mask = np.zeros(int(n_total), dtype=int)\n    idx = rng.choice(int(n_total), size=int(n_selected), replace=False)\n    mask[idx] = 1\n    return pd.DataFrame({\"mask\": mask})\n",
+  "filepath": "analisis-calidad-estimacion-1pl-bayesiana/src/analisis_calidad_estimacion_1pl_bayesiana/pipelines/subsample_s1/pipeline.py",
+  "parameters": {
+    "sample__s1.student_parameters.number_of_students": 1000,
+    "sample__s1.seed": 123
+  },
+  "run_command": "kedro run --to-nodes='subsample__s1.s1_generate_subsample_mask_p_0_2'",
+  "inputs": [
+    "params:sample__s1.student_parameters.number_of_students",
+    "params:sample__s1.seed"
+  ],
+  "outputs": [
+    "subsample__s1.subsample_mask_p_0_2"
+  ]
+}

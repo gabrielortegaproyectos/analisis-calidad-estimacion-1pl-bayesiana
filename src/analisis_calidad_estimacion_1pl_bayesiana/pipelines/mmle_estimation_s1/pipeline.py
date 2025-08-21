@@ -1,4 +1,3 @@
-from functools import update_wrapper
 from kedro.pipeline import Pipeline, node
 
 from .nodes import mmle_estimate_for_mask, summarize_mmle_estimation
@@ -21,13 +20,9 @@ def create_pipeline(**kwargs) -> Pipeline:
         out_name = f"mmle_estimation_difficulty_p_{key}"
         est_output_names.append((p, out_name))
 
-        # wrap only for clean logging names
-        func = mmle_estimate_for_mask
-        update_wrapper(func, mmle_estimate_for_mask)
-
         nodes.append(
             node(
-                func=func,
+                func=mmle_estimate_for_mask,
                 inputs=dict(
                     responses="sample__s1.responses",
                     mask=f"subsample__s1.{mask_name}",

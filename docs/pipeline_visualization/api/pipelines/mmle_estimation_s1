@@ -1,0 +1,1234 @@
+{
+  "nodes": [
+    {
+      "id": "3f279825",
+      "name": "sample__s1.difficulties",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "auto_pred",
+        "bayes"
+      ],
+      "pipelines": [
+        "sample_s1",
+        "bayes_estimation_s1",
+        "auto_pred_s1",
+        "mmle_estimation_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "sample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "481ac5f7",
+      "name": "sample__s1.responses",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "__default__",
+        "mmle_estimation_s1",
+        "sample_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "sample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "31ef6ae0",
+      "name": "subsample__s1.subsample_mask_p_0_1",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "9d876d4c",
+      "name": "subsample__s1.subsample_mask_p_0_2",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "a51fd4e4",
+      "name": "subsample__s1.subsample_mask_p_0_3",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "3f72a834",
+      "name": "subsample__s1.subsample_mask_p_0_4",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "36773d89",
+      "name": "subsample__s1.subsample_mask_p_0_5",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "6c229df8",
+      "name": "subsample__s1.subsample_mask_p_0_6",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "e885abb8",
+      "name": "subsample__s1.subsample_mask_p_0_7",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "a2054d61",
+      "name": "subsample__s1.subsample_mask_p_0_8",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "eb51a6f4",
+      "name": "subsample__s1.subsample_mask_p_0_9",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "7a1e2e69",
+      "name": "subsample__s1.subsample_mask_p_1_0",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "e56e9360",
+      "name": "s1_mmle_estimate_for_subsample_mask_p_0_1",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "b5d5658a",
+      "name": "mmle_estimation__s1.mmle_estimation_difficulty_p_0_1",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "f899ba37",
+      "name": "s1_mmle_estimate_for_subsample_mask_p_0_2",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "44e3c51a",
+      "name": "mmle_estimation__s1.mmle_estimation_difficulty_p_0_2",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "07928a94",
+      "name": "s1_mmle_estimate_for_subsample_mask_p_0_3",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "59763a46",
+      "name": "mmle_estimation__s1.mmle_estimation_difficulty_p_0_3",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "197a04e1",
+      "name": "s1_mmle_estimate_for_subsample_mask_p_0_4",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "6cbee389",
+      "name": "mmle_estimation__s1.mmle_estimation_difficulty_p_0_4",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "efb7ed24",
+      "name": "s1_mmle_estimate_for_subsample_mask_p_0_5",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "f57e6bbf",
+      "name": "mmle_estimation__s1.mmle_estimation_difficulty_p_0_5",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "c4c9ec9a",
+      "name": "s1_mmle_estimate_for_subsample_mask_p_0_6",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "e6f29e27",
+      "name": "mmle_estimation__s1.mmle_estimation_difficulty_p_0_6",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "86d05fc2",
+      "name": "s1_mmle_estimate_for_subsample_mask_p_0_7",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "95bdff62",
+      "name": "mmle_estimation__s1.mmle_estimation_difficulty_p_0_7",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "511fc131",
+      "name": "s1_mmle_estimate_for_subsample_mask_p_0_8",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "8be5d61a",
+      "name": "mmle_estimation__s1.mmle_estimation_difficulty_p_0_8",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "79ab1e06",
+      "name": "s1_mmle_estimate_for_subsample_mask_p_0_9",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "fe2ee6af",
+      "name": "mmle_estimation__s1.mmle_estimation_difficulty_p_0_9",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "5da037e1",
+      "name": "s1_mmle_estimate_for_subsample_mask_p_1_0",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "26a86f70",
+      "name": "mmle_estimation__s1.mmle_estimation_difficulty_p_1_0",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "ad3c472f",
+      "name": "s1_mmle_estimation_summary",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "15f05f2d",
+      "name": "mmle_estimation__s1.mmle_estimation_summary",
+      "tags": [
+        "reporting",
+        "mmle",
+        "estimation",
+        "sample",
+        "comparison",
+        "sample_1"
+      ],
+      "pipelines": [
+        "reporting_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "mmle_estimation__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": {
+        "rows": 10,
+        "columns": 8,
+        "file_size": 1223
+      }
+    },
+    {
+      "id": "mmle_estimation__s1",
+      "name": "mmle_estimation__s1",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "mmle_estimation_s1"
+      ],
+      "type": "modularPipeline",
+      "modular_pipelines": null,
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "511fc131",
+      "target": "8be5d61a"
+    },
+    {
+      "source": "197a04e1",
+      "target": "6cbee389"
+    },
+    {
+      "source": "481ac5f7",
+      "target": "mmle_estimation__s1"
+    },
+    {
+      "source": "eb51a6f4",
+      "target": "79ab1e06"
+    },
+    {
+      "source": "59763a46",
+      "target": "ad3c472f"
+    },
+    {
+      "source": "26a86f70",
+      "target": "ad3c472f"
+    },
+    {
+      "source": "e885abb8",
+      "target": "mmle_estimation__s1"
+    },
+    {
+      "source": "5da037e1",
+      "target": "26a86f70"
+    },
+    {
+      "source": "ad3c472f",
+      "target": "15f05f2d"
+    },
+    {
+      "source": "mmle_estimation__s1",
+      "target": "15f05f2d"
+    },
+    {
+      "source": "31ef6ae0",
+      "target": "e56e9360"
+    },
+    {
+      "source": "95bdff62",
+      "target": "ad3c472f"
+    },
+    {
+      "source": "481ac5f7",
+      "target": "79ab1e06"
+    },
+    {
+      "source": "79ab1e06",
+      "target": "fe2ee6af"
+    },
+    {
+      "source": "481ac5f7",
+      "target": "5da037e1"
+    },
+    {
+      "source": "44e3c51a",
+      "target": "ad3c472f"
+    },
+    {
+      "source": "6c229df8",
+      "target": "mmle_estimation__s1"
+    },
+    {
+      "source": "481ac5f7",
+      "target": "07928a94"
+    },
+    {
+      "source": "481ac5f7",
+      "target": "f899ba37"
+    },
+    {
+      "source": "a2054d61",
+      "target": "mmle_estimation__s1"
+    },
+    {
+      "source": "3f72a834",
+      "target": "197a04e1"
+    },
+    {
+      "source": "481ac5f7",
+      "target": "c4c9ec9a"
+    },
+    {
+      "source": "481ac5f7",
+      "target": "511fc131"
+    },
+    {
+      "source": "efb7ed24",
+      "target": "f57e6bbf"
+    },
+    {
+      "source": "b5d5658a",
+      "target": "ad3c472f"
+    },
+    {
+      "source": "3f72a834",
+      "target": "mmle_estimation__s1"
+    },
+    {
+      "source": "f57e6bbf",
+      "target": "ad3c472f"
+    },
+    {
+      "source": "8be5d61a",
+      "target": "ad3c472f"
+    },
+    {
+      "source": "e56e9360",
+      "target": "b5d5658a"
+    },
+    {
+      "source": "36773d89",
+      "target": "efb7ed24"
+    },
+    {
+      "source": "07928a94",
+      "target": "59763a46"
+    },
+    {
+      "source": "3f279825",
+      "target": "ad3c472f"
+    },
+    {
+      "source": "7a1e2e69",
+      "target": "mmle_estimation__s1"
+    },
+    {
+      "source": "9d876d4c",
+      "target": "mmle_estimation__s1"
+    },
+    {
+      "source": "c4c9ec9a",
+      "target": "e6f29e27"
+    },
+    {
+      "source": "e6f29e27",
+      "target": "ad3c472f"
+    },
+    {
+      "source": "481ac5f7",
+      "target": "86d05fc2"
+    },
+    {
+      "source": "31ef6ae0",
+      "target": "mmle_estimation__s1"
+    },
+    {
+      "source": "86d05fc2",
+      "target": "95bdff62"
+    },
+    {
+      "source": "f899ba37",
+      "target": "44e3c51a"
+    },
+    {
+      "source": "481ac5f7",
+      "target": "efb7ed24"
+    },
+    {
+      "source": "3f279825",
+      "target": "mmle_estimation__s1"
+    },
+    {
+      "source": "a51fd4e4",
+      "target": "mmle_estimation__s1"
+    },
+    {
+      "source": "6c229df8",
+      "target": "c4c9ec9a"
+    },
+    {
+      "source": "481ac5f7",
+      "target": "e56e9360"
+    },
+    {
+      "source": "a51fd4e4",
+      "target": "07928a94"
+    },
+    {
+      "source": "e885abb8",
+      "target": "86d05fc2"
+    },
+    {
+      "source": "6cbee389",
+      "target": "ad3c472f"
+    },
+    {
+      "source": "a2054d61",
+      "target": "511fc131"
+    },
+    {
+      "source": "7a1e2e69",
+      "target": "5da037e1"
+    },
+    {
+      "source": "fe2ee6af",
+      "target": "ad3c472f"
+    },
+    {
+      "source": "9d876d4c",
+      "target": "f899ba37"
+    },
+    {
+      "source": "eb51a6f4",
+      "target": "mmle_estimation__s1"
+    },
+    {
+      "source": "36773d89",
+      "target": "mmle_estimation__s1"
+    },
+    {
+      "source": "481ac5f7",
+      "target": "197a04e1"
+    }
+  ],
+  "layers": [],
+  "tags": [
+    {
+      "id": "auto_pred",
+      "name": "auto_pred"
+    },
+    {
+      "id": "bayes",
+      "name": "bayes"
+    },
+    {
+      "id": "comparison",
+      "name": "comparison"
+    },
+    {
+      "id": "estimation",
+      "name": "estimation"
+    },
+    {
+      "id": "mmle",
+      "name": "mmle"
+    },
+    {
+      "id": "random_subsample",
+      "name": "random_subsample"
+    },
+    {
+      "id": "reporting",
+      "name": "reporting"
+    },
+    {
+      "id": "sample",
+      "name": "sample"
+    },
+    {
+      "id": "sample_1",
+      "name": "sample_1"
+    }
+  ],
+  "pipelines": [
+    {
+      "id": "sample_s1",
+      "name": "sample_s1"
+    },
+    {
+      "id": "auto_pred_s1",
+      "name": "auto_pred_s1"
+    },
+    {
+      "id": "subsample_s1",
+      "name": "subsample_s1"
+    },
+    {
+      "id": "mmle_estimation_s1",
+      "name": "mmle_estimation_s1"
+    },
+    {
+      "id": "bayes_estimation_s1",
+      "name": "bayes_estimation_s1"
+    },
+    {
+      "id": "reporting_s1",
+      "name": "reporting_s1"
+    },
+    {
+      "id": "__default__",
+      "name": "__default__"
+    }
+  ],
+  "modular_pipelines": {
+    "__root__": {
+      "id": "__root__",
+      "name": "__root__",
+      "inputs": [],
+      "outputs": [],
+      "children": [
+        {
+          "id": "6c229df8",
+          "type": "data"
+        },
+        {
+          "id": "mmle_estimation__s1",
+          "type": "modularPipeline"
+        },
+        {
+          "id": "481ac5f7",
+          "type": "data"
+        },
+        {
+          "id": "7a1e2e69",
+          "type": "data"
+        },
+        {
+          "id": "9d876d4c",
+          "type": "data"
+        },
+        {
+          "id": "31ef6ae0",
+          "type": "data"
+        },
+        {
+          "id": "a2054d61",
+          "type": "data"
+        },
+        {
+          "id": "eb51a6f4",
+          "type": "data"
+        },
+        {
+          "id": "3f279825",
+          "type": "data"
+        },
+        {
+          "id": "e885abb8",
+          "type": "data"
+        },
+        {
+          "id": "a51fd4e4",
+          "type": "data"
+        },
+        {
+          "id": "36773d89",
+          "type": "data"
+        },
+        {
+          "id": "15f05f2d",
+          "type": "data"
+        },
+        {
+          "id": "3f72a834",
+          "type": "data"
+        }
+      ]
+    },
+    "mmle_estimation__s1": {
+      "id": "mmle_estimation__s1",
+      "name": "mmle_estimation__s1",
+      "inputs": [
+        "a2054d61",
+        "481ac5f7",
+        "3f72a834",
+        "e885abb8",
+        "eb51a6f4",
+        "7a1e2e69",
+        "31ef6ae0",
+        "3f279825",
+        "36773d89",
+        "9d876d4c",
+        "a51fd4e4",
+        "6c229df8"
+      ],
+      "outputs": [
+        "15f05f2d"
+      ],
+      "children": [
+        {
+          "id": "59763a46",
+          "type": "data"
+        },
+        {
+          "id": "26a86f70",
+          "type": "data"
+        },
+        {
+          "id": "197a04e1",
+          "type": "task"
+        },
+        {
+          "id": "95bdff62",
+          "type": "data"
+        },
+        {
+          "id": "44e3c51a",
+          "type": "data"
+        },
+        {
+          "id": "86d05fc2",
+          "type": "task"
+        },
+        {
+          "id": "b5d5658a",
+          "type": "data"
+        },
+        {
+          "id": "c4c9ec9a",
+          "type": "task"
+        },
+        {
+          "id": "f57e6bbf",
+          "type": "data"
+        },
+        {
+          "id": "8be5d61a",
+          "type": "data"
+        },
+        {
+          "id": "511fc131",
+          "type": "task"
+        },
+        {
+          "id": "f899ba37",
+          "type": "task"
+        },
+        {
+          "id": "e6f29e27",
+          "type": "data"
+        },
+        {
+          "id": "5da037e1",
+          "type": "task"
+        },
+        {
+          "id": "07928a94",
+          "type": "task"
+        },
+        {
+          "id": "6cbee389",
+          "type": "data"
+        },
+        {
+          "id": "e56e9360",
+          "type": "task"
+        },
+        {
+          "id": "79ab1e06",
+          "type": "task"
+        },
+        {
+          "id": "fe2ee6af",
+          "type": "data"
+        },
+        {
+          "id": "ad3c472f",
+          "type": "task"
+        },
+        {
+          "id": "efb7ed24",
+          "type": "task"
+        }
+      ]
+    }
+  },
+  "selected_pipeline": "mmle_estimation_s1"
+}

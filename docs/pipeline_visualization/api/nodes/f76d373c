@@ -1,0 +1,22 @@
+{
+  "code": "def summarize_pred_discrimination(\n    difficulties: pd.DataFrame,\n    **preds: pd.DataFrame,\n) -> pd.DataFrame:\n    \"\"\"Resumen de discriminación lograda por cada dataset de predicción.\n\n    Espera ``difficulties`` con columnas [item_id, difficulty] y múltiples\n    dataframes de predicción como kwargs, donde cada uno tiene columnas\n    [item_id, predicted_difficulty]. Las claves de kwargs deben tener el\n    formato ``pred_r_0_1``, ``pred_r_0_2``, etc., de donde se extrae el\n    ``r_target``.\n    \"\"\"\n    diffs = difficulties.sort_values(\"item_id\").reset_index(drop=True)\n    true = diffs[\"difficulty\"].to_numpy(dtype=float)\n\n    rows: list[dict] = []\n    for key, df in sorted(preds.items()):\n        # Extraer r objetivo de la clave 'pred_r_0_1' -> 0.1\n        try:\n            r_str = key.split(\"pred_r_\")[-1]\n            r_target = float(r_str.replace(\"_\", \".\"))\n            r2_target = r_target ** 2\n        except Exception:\n            r_target, r2_target = (float(\"nan\"), float(\"nan\"))\n\n        pred_df = df.sort_values(\"item_id\").reset_index(drop=True)\n        pred = pred_df[\"predicted_difficulty\"].to_numpy(dtype=float)\n\n        # Alinear si fuese necesario\n        if pred_df.shape[0] != diffs.shape[0] or not np.all(pred_df[\"item_id\"].to_numpy() == diffs[\"item_id\"].to_numpy()):\n            merged = pd.merge(diffs, pred_df, on=\"item_id\", how=\"inner\")\n            true_al = merged[\"difficulty\"].to_numpy(dtype=float)\n            pred_al = merged[\"predicted_difficulty\"].to_numpy(dtype=float)\n        else:\n            true_al, pred_al = true, pred\n\n        corr = float(np.corrcoef(true_al, pred_al)[0, 1]) if true_al.size > 1 else 1.0\n        r2 = corr * corr\n        rows.append({\n            \"dataset_key\": key,\n            \"r_target\": r_target,\n            \"r2_target\": r2_target,\n            \"r_achieved\": corr,\n            \"r2_achieved\": r2,\n            \"n_items\": int(true_al.size),\n        })\n\n    summary = pd.DataFrame(rows).sort_values(\"r_target\").reset_index(drop=True)\n    logger.info(\"[auto_pred_s1] resumen discriminación: %s\", summary.to_dict(orient=\"list\"))\n    return summary\n",
+  "filepath": "analisis-calidad-estimacion-1pl-bayesiana/src/analisis_calidad_estimacion_1pl_bayesiana/pipelines/auto_pred_s1/nodes.py",
+  "parameters": {},
+  "run_command": "kedro run --to-nodes='auto_pred__s1.s1_summarize_pred_discrimination'",
+  "inputs": [
+    "sample__s1.difficulties",
+    "auto_pred__s1.pred_difficulty_r_0_1",
+    "auto_pred__s1.pred_difficulty_r_0_2",
+    "auto_pred__s1.pred_difficulty_r_0_3",
+    "auto_pred__s1.pred_difficulty_r_0_4",
+    "auto_pred__s1.pred_difficulty_r_0_5",
+    "auto_pred__s1.pred_difficulty_r_0_6",
+    "auto_pred__s1.pred_difficulty_r_0_7",
+    "auto_pred__s1.pred_difficulty_r_0_8",
+    "auto_pred__s1.pred_difficulty_r_0_9",
+    "auto_pred__s1.pred_difficulty_r_1_0"
+  ],
+  "outputs": [
+    "auto_pred__s1.pred_discrimination_summary"
+  ]
+}

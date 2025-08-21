@@ -1,0 +1,15 @@
+{
+  "code": null,
+  "filepath": null,
+  "parameters": {
+    "sample__s1.seed": 123
+  },
+  "run_command": "kedro run --to-nodes='auto_pred__s1.s1_generate_pred_for_r_0_1'",
+  "inputs": [
+    "sample__s1.difficulties",
+    "params:sample__s1.seed"
+  ],
+  "outputs": [
+    "auto_pred__s1.pred_difficulty_r_0_1"
+  ]
+}

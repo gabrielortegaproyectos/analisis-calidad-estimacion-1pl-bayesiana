@@ -69,28 +69,23 @@ def _plot_bayes_with_mmle_hlines(
     else:
         x_min, x_max = float(min(percents)), float(max(percents))
 
-    # Línea horizontal (baseline MMLE) usando solo percent=1.0
+    # Línea horizontal (baseline MMLE) usando SOLO percent=1.0
+    baseline_drawn = False
     mmle_p1 = mmle_summary.loc[mmle_summary["percent"] == 1.0, ["percent", metric]].dropna()
     if not mmle_p1.empty:
         y = float(mmle_p1.iloc[0][metric])
         ax.hlines(y=y, xmin=x_min, xmax=x_max, colors="tab:gray", linestyles="dashed", alpha=0.7)
         baseline_label = "MMLE baseline (percent=1.0)"
-    else:
-        # Fallback: usar el percent máximo disponible
-        mmle_max = mmle_summary.sort_values("percent").dropna(subset=[metric]).tail(1)
-        if not mmle_max.empty:
-            y = float(mmle_max.iloc[0][metric])
-            ax.hlines(y=y, xmin=x_min, xmax=x_max, colors="tab:gray", linestyles="dashed", alpha=0.7)
-            p_val = float(mmle_max.iloc[0]["percent"])
-            baseline_label = f"MMLE baseline (percent={p_val})"
-        else:
-            baseline_label = "MMLE baseline"
+        baseline_drawn = True
 
-    # Leyenda (incluye handler para baseline)
+    # Leyenda: añadir baseline sólo si fue dibujada
     from matplotlib.lines import Line2D
-    custom = [Line2D([0], [0], color="tab:gray", linestyle="--", alpha=0.8, label=baseline_label)]
     handles, labels = ax.get_legend_handles_labels()
-    ax.legend(handles + custom, labels + [baseline_label], loc="best")
+    if baseline_drawn:
+        custom = [Line2D([0], [0], color="tab:gray", linestyle="--", alpha=0.8, label=baseline_label)]
+        ax.legend(handles + custom, labels + [baseline_label], loc="best")
+    else:
+        ax.legend(loc="best")
 
     ax.set_xlabel("percent")
     ax.set_ylabel(metric)

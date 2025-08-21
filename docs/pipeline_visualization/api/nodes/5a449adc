@@ -1,0 +1,14 @@
+{
+  "code": "def plot_bayes_vs_mmle_baselines(\n    mmle_summary: pd.DataFrame,\n    bayes_summary: pd.DataFrame,\n) -> dict:\n    \"\"\"Figuras combinadas Bayes (por r) + líneas horizontales MMLE por percent.\n\n    Devuelve dict con claves: bayes_r2_with_mmle_hlines, bayes_mse_with_mmle_hlines\n    \"\"\"\n    figs = {}\n    figs[\"bayes_r2_with_mmle_hlines\"] = _plot_bayes_with_mmle_hlines(\n        bayes_summary, mmle_summary, \"r2\", \"Bayes vs MMLE: percent vs R2 (por r + baseline MMLE)\"\n    )\n    figs[\"bayes_mse_with_mmle_hlines\"] = _plot_bayes_with_mmle_hlines(\n        bayes_summary, mmle_summary, \"mse\", \"Bayes vs MMLE: percent vs MSE (por r + baseline MMLE)\"\n    )\n    return figs\n",
+  "filepath": "analisis-calidad-estimacion-1pl-bayesiana/src/analisis_calidad_estimacion_1pl_bayesiana/pipelines/reporting_s1/nodes.py",
+  "parameters": {},
+  "run_command": "kedro run --to-nodes='reporting__s1.s1_plot_bayes_vs_mmle_baselines'",
+  "inputs": [
+    "mmle_estimation__s1.mmle_estimation_summary",
+    "bayes_estimation__s1.bayes_estimation_summary"
+  ],
+  "outputs": [
+    "reporting__s1.bayes_r2_with_mmle_hlines",
+    "reporting__s1.bayes_mse_with_mmle_hlines"
+  ]
+}

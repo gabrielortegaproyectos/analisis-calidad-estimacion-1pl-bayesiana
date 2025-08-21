@@ -1,4 +1,3 @@
-from functools import update_wrapper
 from kedro.pipeline import Pipeline, node
 
 from .nodes import bayes_estimate_for_mask_and_prior, summarize_bayes_estimation
@@ -25,12 +24,9 @@ def create_pipeline(**kwargs) -> Pipeline:
             out_name = f"bayes_estimation_difficulty_p_{p_key}_r_{r_key}"
             est_output_names.append((f"est_p_{p_key}_r_{r_key}", out_name))
 
-            func = bayes_estimate_for_mask_and_prior
-            update_wrapper(func, bayes_estimate_for_mask_and_prior)
-
             nodes.append(
                 node(
-                    func=func,
+                    func=bayes_estimate_for_mask_and_prior,
                     inputs=dict(
                         responses="sample__s1.responses",
                         mask=mask_ds,

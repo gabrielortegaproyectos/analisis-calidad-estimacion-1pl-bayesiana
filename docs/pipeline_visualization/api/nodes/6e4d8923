@@ -1,0 +1,5 @@
+{
+  "parameters": {
+    "sample__s1.bayes_estimation.draws": 1000
+  }
+}

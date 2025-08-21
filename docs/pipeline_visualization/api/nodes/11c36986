@@ -1,0 +1,21 @@
+{
+  "code": "def generate_abilities_s1(\n    n_persons: int,\n    theta_distribution: Dict[str, float],\n    seed: int | None = None,\n) -> pd.DataFrame:\n    \"\"\"Genera habilidades de personas para el sample 1.\"\"\"\n    if seed is not None:\n        np.random.seed(seed + 1 if seed is not None else None)\n    mu = float(theta_distribution.get(\"mean\", 0.0))\n    var = float(theta_distribution.get(\"variance\", 1.0))\n    sd = float(np.sqrt(max(var, 0.0)))\n    t = np.random.normal(mu, sd, int(n_persons))\n    df = pd.DataFrame({\"person_id\": np.arange(1, int(n_persons) + 1), \"ability\": t})\n    logger.info(\"[s1] Generated abilities: n_persons=%d, mu=%.3f, var=%.3f\", int(n_persons), mu, var)\n    return df\n",
+  "filepath": "analisis-calidad-estimacion-1pl-bayesiana/src/analisis_calidad_estimacion_1pl_bayesiana/pipelines/sample_s1/nodes.py",
+  "parameters": {
+    "sample__s1.student_parameters.number_of_students": 1000,
+    "sample__s1.student_parameters.theta_distribution": {
+      "mean": 0.0,
+      "variance": 1.0
+    },
+    "sample__s1.seed": 123
+  },
+  "run_command": "kedro run --to-nodes='sample__s1.s1_generate_abilities'",
+  "inputs": [
+    "params:sample__s1.student_parameters.number_of_students",
+    "params:sample__s1.student_parameters.theta_distribution",
+    "params:sample__s1.seed"
+  ],
+  "outputs": [
+    "sample__s1.abilities"
+  ]
+}

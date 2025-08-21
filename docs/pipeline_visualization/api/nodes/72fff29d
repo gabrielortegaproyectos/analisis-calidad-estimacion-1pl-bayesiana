@@ -1,0 +1,5 @@
+{
+  "parameters": {
+    "sample__s1.student_parameters.number_of_students": 1000
+  }
+}

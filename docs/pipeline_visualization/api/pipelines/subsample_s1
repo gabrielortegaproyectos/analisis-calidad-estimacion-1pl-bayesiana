@@ -1,0 +1,888 @@
+{
+  "nodes": [
+    {
+      "id": "72fff29d",
+      "name": "params:sample__s1.student_parameters.number_of_students",
+      "tags": [
+        "random_subsample",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "subsample_s1",
+        "__default__",
+        "sample_s1"
+      ],
+      "type": "parameters",
+      "modular_pipelines": null,
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    },
+    {
+      "id": "d92fddf8",
+      "name": "params:sample__s1.seed",
+      "tags": [
+        "random_subsample",
+        "estimation",
+        "sample",
+        "sample_1",
+        "auto_pred",
+        "bayes"
+      ],
+      "pipelines": [
+        "sample_s1",
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "parameters",
+      "modular_pipelines": null,
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    },
+    {
+      "id": "a54b0549",
+      "name": "s1_generate_subsample_mask_p_0_1",
+      "tags": [
+        "random_subsample",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "subsample_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "parameters": {
+        "sample__s1.student_parameters.number_of_students": 1000,
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "31ef6ae0",
+      "name": "subsample__s1.subsample_mask_p_0_1",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "9e5e89fd",
+      "name": "s1_generate_subsample_mask_p_0_2",
+      "tags": [
+        "random_subsample",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "subsample_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "parameters": {
+        "sample__s1.student_parameters.number_of_students": 1000,
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "9d876d4c",
+      "name": "subsample__s1.subsample_mask_p_0_2",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "ee925274",
+      "name": "s1_generate_subsample_mask_p_0_3",
+      "tags": [
+        "random_subsample",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "subsample_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "parameters": {
+        "sample__s1.student_parameters.number_of_students": 1000,
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "a51fd4e4",
+      "name": "subsample__s1.subsample_mask_p_0_3",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "0dc38346",
+      "name": "s1_generate_subsample_mask_p_0_4",
+      "tags": [
+        "random_subsample",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "subsample_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "parameters": {
+        "sample__s1.student_parameters.number_of_students": 1000,
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "3f72a834",
+      "name": "subsample__s1.subsample_mask_p_0_4",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "18de93b3",
+      "name": "s1_generate_subsample_mask_p_0_5",
+      "tags": [
+        "random_subsample",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "subsample_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "parameters": {
+        "sample__s1.student_parameters.number_of_students": 1000,
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "36773d89",
+      "name": "subsample__s1.subsample_mask_p_0_5",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "63433cc7",
+      "name": "s1_generate_subsample_mask_p_0_6",
+      "tags": [
+        "random_subsample",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "subsample_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "parameters": {
+        "sample__s1.student_parameters.number_of_students": 1000,
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "6c229df8",
+      "name": "subsample__s1.subsample_mask_p_0_6",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "7d42f146",
+      "name": "s1_generate_subsample_mask_p_0_7",
+      "tags": [
+        "random_subsample",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "subsample_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "parameters": {
+        "sample__s1.student_parameters.number_of_students": 1000,
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "e885abb8",
+      "name": "subsample__s1.subsample_mask_p_0_7",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "9516d5cf",
+      "name": "s1_generate_subsample_mask_p_0_8",
+      "tags": [
+        "random_subsample",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "subsample_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "parameters": {
+        "sample__s1.student_parameters.number_of_students": 1000,
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "a2054d61",
+      "name": "subsample__s1.subsample_mask_p_0_8",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "1224c870",
+      "name": "s1_generate_subsample_mask_p_0_9",
+      "tags": [
+        "random_subsample",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "subsample_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "parameters": {
+        "sample__s1.student_parameters.number_of_students": 1000,
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "eb51a6f4",
+      "name": "subsample__s1.subsample_mask_p_0_9",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "ba45a3c8",
+      "name": "s1_generate_subsample_mask_p_1_0",
+      "tags": [
+        "random_subsample",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "subsample_s1",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "parameters": {
+        "sample__s1.student_parameters.number_of_students": 1000,
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "7a1e2e69",
+      "name": "subsample__s1.subsample_mask_p_1_0",
+      "tags": [
+        "random_subsample",
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "__default__",
+        "mmle_estimation_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "subsample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "subsample__s1",
+      "name": "subsample__s1",
+      "tags": [
+        "random_subsample",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "subsample_s1"
+      ],
+      "type": "modularPipeline",
+      "modular_pipelines": null,
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "subsample__s1",
+      "target": "31ef6ae0"
+    },
+    {
+      "source": "72fff29d",
+      "target": "9e5e89fd"
+    },
+    {
+      "source": "subsample__s1",
+      "target": "36773d89"
+    },
+    {
+      "source": "72fff29d",
+      "target": "ba45a3c8"
+    },
+    {
+      "source": "ee925274",
+      "target": "a51fd4e4"
+    },
+    {
+      "source": "63433cc7",
+      "target": "6c229df8"
+    },
+    {
+      "source": "subsample__s1",
+      "target": "a2054d61"
+    },
+    {
+      "source": "1224c870",
+      "target": "eb51a6f4"
+    },
+    {
+      "source": "subsample__s1",
+      "target": "3f72a834"
+    },
+    {
+      "source": "subsample__s1",
+      "target": "a51fd4e4"
+    },
+    {
+      "source": "subsample__s1",
+      "target": "6c229df8"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "63433cc7"
+    },
+    {
+      "source": "72fff29d",
+      "target": "18de93b3"
+    },
+    {
+      "source": "7d42f146",
+      "target": "e885abb8"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "ba45a3c8"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "9e5e89fd"
+    },
+    {
+      "source": "72fff29d",
+      "target": "0dc38346"
+    },
+    {
+      "source": "subsample__s1",
+      "target": "e885abb8"
+    },
+    {
+      "source": "72fff29d",
+      "target": "9516d5cf"
+    },
+    {
+      "source": "72fff29d",
+      "target": "ee925274"
+    },
+    {
+      "source": "72fff29d",
+      "target": "1224c870"
+    },
+    {
+      "source": "72fff29d",
+      "target": "a54b0549"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "18de93b3"
+    },
+    {
+      "source": "9e5e89fd",
+      "target": "9d876d4c"
+    },
+    {
+      "source": "72fff29d",
+      "target": "subsample__s1"
+    },
+    {
+      "source": "a54b0549",
+      "target": "31ef6ae0"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "0dc38346"
+    },
+    {
+      "source": "subsample__s1",
+      "target": "eb51a6f4"
+    },
+    {
+      "source": "ba45a3c8",
+      "target": "7a1e2e69"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "ee925274"
+    },
+    {
+      "source": "subsample__s1",
+      "target": "9d876d4c"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "9516d5cf"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "1224c870"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "a54b0549"
+    },
+    {
+      "source": "72fff29d",
+      "target": "7d42f146"
+    },
+    {
+      "source": "9516d5cf",
+      "target": "a2054d61"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "subsample__s1"
+    },
+    {
+      "source": "0dc38346",
+      "target": "3f72a834"
+    },
+    {
+      "source": "18de93b3",
+      "target": "36773d89"
+    },
+    {
+      "source": "subsample__s1",
+      "target": "7a1e2e69"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "7d42f146"
+    },
+    {
+      "source": "72fff29d",
+      "target": "63433cc7"
+    }
+  ],
+  "layers": [],
+  "tags": [
+    {
+      "id": "auto_pred",
+      "name": "auto_pred"
+    },
+    {
+      "id": "bayes",
+      "name": "bayes"
+    },
+    {
+      "id": "comparison",
+      "name": "comparison"
+    },
+    {
+      "id": "estimation",
+      "name": "estimation"
+    },
+    {
+      "id": "mmle",
+      "name": "mmle"
+    },
+    {
+      "id": "random_subsample",
+      "name": "random_subsample"
+    },
+    {
+      "id": "reporting",
+      "name": "reporting"
+    },
+    {
+      "id": "sample",
+      "name": "sample"
+    },
+    {
+      "id": "sample_1",
+      "name": "sample_1"
+    }
+  ],
+  "pipelines": [
+    {
+      "id": "sample_s1",
+      "name": "sample_s1"
+    },
+    {
+      "id": "auto_pred_s1",
+      "name": "auto_pred_s1"
+    },
+    {
+      "id": "subsample_s1",
+      "name": "subsample_s1"
+    },
+    {
+      "id": "mmle_estimation_s1",
+      "name": "mmle_estimation_s1"
+    },
+    {
+      "id": "bayes_estimation_s1",
+      "name": "bayes_estimation_s1"
+    },
+    {
+      "id": "reporting_s1",
+      "name": "reporting_s1"
+    },
+    {
+      "id": "__default__",
+      "name": "__default__"
+    }
+  ],
+  "modular_pipelines": {
+    "__root__": {
+      "id": "__root__",
+      "name": "__root__",
+      "inputs": [],
+      "outputs": [],
+      "children": [
+        {
+          "id": "72fff29d",
+          "type": "parameters"
+        },
+        {
+          "id": "d92fddf8",
+          "type": "parameters"
+        },
+        {
+          "id": "6c229df8",
+          "type": "data"
+        },
+        {
+          "id": "9d876d4c",
+          "type": "data"
+        },
+        {
+          "id": "7a1e2e69",
+          "type": "data"
+        },
+        {
+          "id": "31ef6ae0",
+          "type": "data"
+        },
+        {
+          "id": "eb51a6f4",
+          "type": "data"
+        },
+        {
+          "id": "a2054d61",
+          "type": "data"
+        },
+        {
+          "id": "subsample__s1",
+          "type": "modularPipeline"
+        },
+        {
+          "id": "e885abb8",
+          "type": "data"
+        },
+        {
+          "id": "a51fd4e4",
+          "type": "data"
+        },
+        {
+          "id": "36773d89",
+          "type": "data"
+        },
+        {
+          "id": "3f72a834",
+          "type": "data"
+        }
+      ]
+    },
+    "subsample__s1": {
+      "id": "subsample__s1",
+      "name": "subsample__s1",
+      "inputs": [
+        "72fff29d",
+        "d92fddf8"
+      ],
+      "outputs": [
+        "a2054d61",
+        "3f72a834",
+        "e885abb8",
+        "eb51a6f4",
+        "7a1e2e69",
+        "31ef6ae0",
+        "36773d89",
+        "a51fd4e4",
+        "9d876d4c",
+        "6c229df8"
+      ],
+      "children": [
+        {
+          "id": "63433cc7",
+          "type": "task"
+        },
+        {
+          "id": "18de93b3",
+          "type": "task"
+        },
+        {
+          "id": "a54b0549",
+          "type": "task"
+        },
+        {
+          "id": "9e5e89fd",
+          "type": "task"
+        },
+        {
+          "id": "9516d5cf",
+          "type": "task"
+        },
+        {
+          "id": "0dc38346",
+          "type": "task"
+        },
+        {
+          "id": "7d42f146",
+          "type": "task"
+        },
+        {
+          "id": "1224c870",
+          "type": "task"
+        },
+        {
+          "id": "ee925274",
+          "type": "task"
+        },
+        {
+          "id": "ba45a3c8",
+          "type": "task"
+        }
+      ]
+    }
+  },
+  "selected_pipeline": "subsample_s1"
+}

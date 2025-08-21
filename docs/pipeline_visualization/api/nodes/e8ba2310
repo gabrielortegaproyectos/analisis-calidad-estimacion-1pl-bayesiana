@@ -1,0 +1,21 @@
+{
+  "code": "def generate_difficulties_s1(\n    n_items: int,\n    stat_difficulty: Dict[str, float],\n    seed: int | None = None,\n) -> pd.DataFrame:\n    \"\"\"Genera dificultades de ítems para el sample 1.\"\"\"\n    if seed is not None:\n        np.random.seed(seed)\n    mu = float(stat_difficulty.get(\"mean\", 0.0))\n    var = float(stat_difficulty.get(\"variance\", 1.0))\n    sd = float(np.sqrt(max(var, 0.0)))\n    d = np.random.normal(mu, sd, int(n_items))\n    df = pd.DataFrame({\"item_id\": np.arange(1, int(n_items) + 1), \"difficulty\": d})\n    logger.info(\"[s1] Generated difficulties: n_items=%d, mu=%.3f, var=%.3f\", int(n_items), mu, var)\n    return df\n",
+  "filepath": "analisis-calidad-estimacion-1pl-bayesiana/src/analisis_calidad_estimacion_1pl_bayesiana/pipelines/sample_s1/nodes.py",
+  "parameters": {
+    "sample__s1.test_parameters.number_of_questions": 80,
+    "sample__s1.test_parameters.stat_difficulty": {
+      "mean": 0.55,
+      "variance": 0.457
+    },
+    "sample__s1.seed": 123
+  },
+  "run_command": "kedro run --to-nodes='sample__s1.s1_generate_difficulties'",
+  "inputs": [
+    "params:sample__s1.test_parameters.number_of_questions",
+    "params:sample__s1.test_parameters.stat_difficulty",
+    "params:sample__s1.seed"
+  ],
+  "outputs": [
+    "sample__s1.difficulties"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "pandas.csv_dataset.CSVDataset",
+  "filepath": "/home/gabriel/Escritorio/Proyectos/Proyectos_datos/Magister/analisis-calidad-estimacion-1pl-bayesiana/data/02_intermediate/subsample__s1/subsample_mask_p_0_5.csv",
+  "run_command": "kedro run --to-outputs=subsample__s1.subsample_mask_p_0_5",
+  "preview": null,
+  "preview_type": null,
+  "stats": null
+}

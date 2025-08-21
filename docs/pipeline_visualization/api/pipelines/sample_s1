@@ -1,0 +1,468 @@
+{
+  "nodes": [
+    {
+      "id": "11c36986",
+      "name": "s1_generate_abilities",
+      "tags": [
+        "sample_1",
+        "sample"
+      ],
+      "pipelines": [
+        "__default__",
+        "sample_s1"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "sample__s1"
+      ],
+      "parameters": {
+        "sample__s1.student_parameters.number_of_students": 1000,
+        "sample__s1.student_parameters.theta_distribution": {
+          "mean": 0.0,
+          "variance": 1.0
+        },
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "72fff29d",
+      "name": "params:sample__s1.student_parameters.number_of_students",
+      "tags": [
+        "random_subsample",
+        "sample",
+        "sample_1"
+      ],
+      "pipelines": [
+        "subsample_s1",
+        "__default__",
+        "sample_s1"
+      ],
+      "type": "parameters",
+      "modular_pipelines": null,
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    },
+    {
+      "id": "c42d07b9",
+      "name": "params:sample__s1.student_parameters.theta_distribution",
+      "tags": [
+        "sample_1",
+        "sample"
+      ],
+      "pipelines": [
+        "__default__",
+        "sample_s1"
+      ],
+      "type": "parameters",
+      "modular_pipelines": null,
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    },
+    {
+      "id": "d92fddf8",
+      "name": "params:sample__s1.seed",
+      "tags": [
+        "random_subsample",
+        "estimation",
+        "sample",
+        "sample_1",
+        "auto_pred",
+        "bayes"
+      ],
+      "pipelines": [
+        "sample_s1",
+        "bayes_estimation_s1",
+        "subsample_s1",
+        "auto_pred_s1",
+        "__default__"
+      ],
+      "type": "parameters",
+      "modular_pipelines": null,
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    },
+    {
+      "id": "4e4eacb0",
+      "name": "sample__s1.abilities",
+      "tags": [
+        "sample_1",
+        "sample"
+      ],
+      "pipelines": [
+        "__default__",
+        "sample_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "sample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "e8ba2310",
+      "name": "s1_generate_difficulties",
+      "tags": [
+        "sample_1",
+        "sample"
+      ],
+      "pipelines": [
+        "__default__",
+        "sample_s1"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "sample__s1"
+      ],
+      "parameters": {
+        "sample__s1.test_parameters.number_of_questions": 80,
+        "sample__s1.test_parameters.stat_difficulty": {
+          "mean": 0.55,
+          "variance": 0.457
+        },
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "120af7ca",
+      "name": "params:sample__s1.test_parameters.number_of_questions",
+      "tags": [
+        "sample_1",
+        "sample"
+      ],
+      "pipelines": [
+        "__default__",
+        "sample_s1"
+      ],
+      "type": "parameters",
+      "modular_pipelines": null,
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    },
+    {
+      "id": "e741a363",
+      "name": "params:sample__s1.test_parameters.stat_difficulty",
+      "tags": [
+        "sample_1",
+        "sample"
+      ],
+      "pipelines": [
+        "__default__",
+        "sample_s1"
+      ],
+      "type": "parameters",
+      "modular_pipelines": null,
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    },
+    {
+      "id": "3f279825",
+      "name": "sample__s1.difficulties",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "auto_pred",
+        "bayes"
+      ],
+      "pipelines": [
+        "sample_s1",
+        "bayes_estimation_s1",
+        "auto_pred_s1",
+        "mmle_estimation_s1",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "sample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "acbf23bd",
+      "name": "s1_simulate_responses",
+      "tags": [
+        "sample_1",
+        "sample"
+      ],
+      "pipelines": [
+        "__default__",
+        "sample_s1"
+      ],
+      "type": "task",
+      "modular_pipelines": [
+        "sample__s1"
+      ],
+      "parameters": {
+        "sample__s1.seed": 123
+      }
+    },
+    {
+      "id": "481ac5f7",
+      "name": "sample__s1.responses",
+      "tags": [
+        "mmle",
+        "estimation",
+        "sample",
+        "sample_1",
+        "bayes"
+      ],
+      "pipelines": [
+        "bayes_estimation_s1",
+        "__default__",
+        "mmle_estimation_s1",
+        "sample_s1"
+      ],
+      "type": "data",
+      "modular_pipelines": [
+        "sample__s1"
+      ],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "sample__s1",
+      "name": "sample__s1",
+      "tags": [
+        "sample_1",
+        "sample"
+      ],
+      "pipelines": [
+        "sample_s1"
+      ],
+      "type": "modularPipeline",
+      "modular_pipelines": null,
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "4e4eacb0",
+      "target": "acbf23bd"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "11c36986"
+    },
+    {
+      "source": "sample__s1",
+      "target": "481ac5f7"
+    },
+    {
+      "source": "c42d07b9",
+      "target": "11c36986"
+    },
+    {
+      "source": "c42d07b9",
+      "target": "sample__s1"
+    },
+    {
+      "source": "72fff29d",
+      "target": "11c36986"
+    },
+    {
+      "source": "acbf23bd",
+      "target": "481ac5f7"
+    },
+    {
+      "source": "120af7ca",
+      "target": "e8ba2310"
+    },
+    {
+      "source": "120af7ca",
+      "target": "sample__s1"
+    },
+    {
+      "source": "72fff29d",
+      "target": "sample__s1"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "e8ba2310"
+    },
+    {
+      "source": "e741a363",
+      "target": "sample__s1"
+    },
+    {
+      "source": "e741a363",
+      "target": "e8ba2310"
+    },
+    {
+      "source": "11c36986",
+      "target": "4e4eacb0"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "acbf23bd"
+    },
+    {
+      "source": "3f279825",
+      "target": "acbf23bd"
+    },
+    {
+      "source": "d92fddf8",
+      "target": "sample__s1"
+    },
+    {
+      "source": "e8ba2310",
+      "target": "3f279825"
+    }
+  ],
+  "layers": [],
+  "tags": [
+    {
+      "id": "auto_pred",
+      "name": "auto_pred"
+    },
+    {
+      "id": "bayes",
+      "name": "bayes"
+    },
+    {
+      "id": "comparison",
+      "name": "comparison"
+    },
+    {
+      "id": "estimation",
+      "name": "estimation"
+    },
+    {
+      "id": "mmle",
+      "name": "mmle"
+    },
+    {
+      "id": "random_subsample",
+      "name": "random_subsample"
+    },
+    {
+      "id": "reporting",
+      "name": "reporting"
+    },
+    {
+      "id": "sample",
+      "name": "sample"
+    },
+    {
+      "id": "sample_1",
+      "name": "sample_1"
+    }
+  ],
+  "pipelines": [
+    {
+      "id": "sample_s1",
+      "name": "sample_s1"
+    },
+    {
+      "id": "auto_pred_s1",
+      "name": "auto_pred_s1"
+    },
+    {
+      "id": "subsample_s1",
+      "name": "subsample_s1"
+    },
+    {
+      "id": "mmle_estimation_s1",
+      "name": "mmle_estimation_s1"
+    },
+    {
+      "id": "bayes_estimation_s1",
+      "name": "bayes_estimation_s1"
+    },
+    {
+      "id": "reporting_s1",
+      "name": "reporting_s1"
+    },
+    {
+      "id": "__default__",
+      "name": "__default__"
+    }
+  ],
+  "modular_pipelines": {
+    "__root__": {
+      "id": "__root__",
+      "name": "__root__",
+      "inputs": [],
+      "outputs": [],
+      "children": [
+        {
+          "id": "72fff29d",
+          "type": "parameters"
+        },
+        {
+          "id": "d92fddf8",
+          "type": "parameters"
+        },
+        {
+          "id": "e741a363",
+          "type": "parameters"
+        },
+        {
+          "id": "c42d07b9",
+          "type": "parameters"
+        },
+        {
+          "id": "481ac5f7",
+          "type": "data"
+        },
+        {
+          "id": "sample__s1",
+          "type": "modularPipeline"
+        },
+        {
+          "id": "120af7ca",
+          "type": "parameters"
+        }
+      ]
+    },
+    "sample__s1": {
+      "id": "sample__s1",
+      "name": "sample__s1",
+      "inputs": [
+        "e741a363",
+        "72fff29d",
+        "120af7ca",
+        "d92fddf8",
+        "c42d07b9"
+      ],
+      "outputs": [
+        "481ac5f7"
+      ],
+      "children": [
+        {
+          "id": "11c36986",
+          "type": "task"
+        },
+        {
+          "id": "acbf23bd",
+          "type": "task"
+        },
+        {
+          "id": "3f279825",
+          "type": "data"
+        },
+        {
+          "id": "4e4eacb0",
+          "type": "data"
+        },
+        {
+          "id": "e8ba2310",
+          "type": "task"
+        }
+      ]
+    }
+  },
+  "selected_pipeline": "sample_s1"
+}
