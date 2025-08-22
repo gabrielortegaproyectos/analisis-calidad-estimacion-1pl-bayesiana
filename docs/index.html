@@ -3,458 +3,397 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Análisis Calidad Estimación 1PL Bayesiana</title>
+    <title>Análisis de Calidad de Estimación 1PL Bayesiana - Reporte de Investigación</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --text-color: #2c3e50;
-            --bg-light: #f8f9fa;
+            --primary-color: #1a1a1a;
+            --secondary-color: #333333;
+            --accent-color: #0066cc;
+            --text-color: #2d2d2d;
+            --bg-light: #fafafa;
+            --border-color: #e0e0e0;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.7;
             color: var(--text-color);
+            background-color: #ffffff;
         }
         
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 5rem 0;
-            margin-bottom: 3rem;
-        }
-        
-        .card {
-            border: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .tech-icon {
-            font-size: 2rem;
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .methodology-flow {
-            background: var(--bg-light);
-            padding: 3rem 0;
-        }
-        
-        .pipeline-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 0;
-        }
-        
-        .btn-primary {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
-            padding: 0.75rem 2rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .btn-primary:hover {
-            background-color: #2980b9;
-            border-color: #2980b9;
-        }
-        
-        .section-title {
-            color: var(--primary-color);
-            margin-bottom: 3rem;
-            font-weight: 700;
-        }
-        
-        .flow-step {
-            text-align: center;
+        .header-section {
+            background-color: #ffffff;
+            border-bottom: 2px solid var(--border-color);
+            padding: 2rem 0;
             margin-bottom: 2rem;
         }
         
-        .flow-step i {
-            font-size: 3rem;
+        .manuscript-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .manuscript-subtitle {
+            font-size: 1.1rem;
             color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .manuscript-meta {
+            text-align: center;
+            color: var(--secondary-color);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+        
+        .section-header {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 2.5rem 0 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .subsection-header {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .academic-card {
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-light);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+            border-radius: 0.25rem;
+            font-size: 0.85rem;
+            font-weight: 500;
             margin-bottom: 1rem;
         }
         
-        .flow-arrow {
-            color: var(--accent-color);
-            font-size: 2rem;
-            margin: 1rem 0;
+        .btn-academic {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            font-weight: 400;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.25rem 0.5rem 0.25rem 0;
         }
         
-        footer {
-            background-color: var(--primary-color);
+        .btn-academic:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
             color: white;
-            padding: 2rem 0;
-            margin-top: 4rem;
+        }
+        
+        .pipeline-viz {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            margin: 2rem 0;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .figure-container {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+        }
+        
+        .figure-caption {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        
+        .methodology-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .methodology-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .methodology-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .abstract-text {
+            font-style: italic;
+            color: var(--secondary-color);
+            border-left: 3px solid var(--accent-color);
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .manuscript-title {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <div class="hero-section">
+    <!-- Header Section -->
+    <div class="header-section">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h1 class="display-4 fw-bold mb-4">
-                        <i class="fas fa-chart-line me-3"></i>
-                        Análisis de Calidad de Estimación 1PL Bayesiana
-                    </h1>
-                    <p class="lead mb-4">
-                        Simulación y comparación empírica de métodos de estimación para modelos 1PL: 
-                        Máxima Verosimilitud (MLE) vs. Enfoque Bayesiano con <em>prior</em> de dificultad externa
-                    </p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#experiment" class="btn btn-light btn-lg">
-                            <i class="fas fa-microscope me-2"></i>Ver Experimento
-                        </a>
-                        <a href="#pipeline" class="btn btn-outline-light btn-lg">
-                            <i class="fas fa-sitemap me-2"></i>Explorar Pipeline
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="text-center">
-                        <i class="fas fa-brain" style="font-size: 8rem; opacity: 0.3;"></i>
-                    </div>
-                </div>
+            <h1 class="manuscript-title">
+                Análisis de Calidad de Estimación en Modelos 1PL: 
+                Comparación entre Máxima Verosimilitud y Enfoque Bayesiano con Prior Informativo
+            </h1>
+            <p class="manuscript-subtitle">
+                Estudio de simulación sobre la efectividad de priors externos en la estimación de parámetros de dificultad
+            </p>
+            <div class="manuscript-meta">
+                <span class="status-badge">🔬 Experimento en Progreso</span><br>
+                <strong>Proyecto de Magíster</strong> | Universidad [Nombre] | 2025<br>
+                <em>Última actualización: 22 de agosto de 2025</em>
             </div>
         </div>
     </div>
 
-    <!-- Experiment Section -->
-    <section id="experiment" class="container mb-5">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="section-title text-center">
-                    <i class="fas fa-flask me-3"></i>El Experimento
-                </h2>
+    <div class="container">
+        <!-- Abstract Section -->
+        <section>
+            <h2 class="section-header">Resumen</h2>
+            <div class="abstract-text">
+                Este trabajo evalúa empíricamente la efectividad de un modelo bayesiano 1PL que utiliza 
+                distribuciones <em>prior</em> para la dificultad del ítem basadas en predicciones externas, 
+                comparándolo con el método tradicional de Máxima Verosimilitud (MLE). Se analizan diferentes 
+                escenarios variando la calidad del <em>prior</em> (R² = 0.2, 0.5, 0.8) y el tamaño muestral 
+                (30%, 50%, 80%, 100% de 1,000 individuos) para determinar las condiciones bajo las cuales 
+                el enfoque bayesiano proporciona estimaciones más precisas.
             </div>
-        </div>
-        
-        <div class="row mb-4">
-            <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <i class="fas fa-bullseye me-2 text-primary"></i>Propósito
-                        </h4>
-                        <p class="card-text">
-                            Evaluar empíricamente si un <strong>modelo bayesiano 1PL</strong> con distribución 
-                            <em>prior</em> para la dificultad del ítem basada en predicciones externas mejora 
-                            la precisión de estimación frente al método tradicional de Máxima Verosimilitud (MLE).
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <i class="fas fa-cogs me-2 text-primary"></i>Escenarios Evaluados
-                        </h4>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>
-                                <strong>Calidad del <em>prior</em>:</strong> R² = 0.2, 0.5, 0.8
-                            </li>
-                            <li><i class="fas fa-check text-success me-2"></i>
-                                <strong>Tamaño muestral:</strong> 30%, 50%, 80%, 100% de 1,000 personas
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Technologies Section -->
-    <section class="methodology-flow">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="section-title text-center">
-                        <i class="fas fa-tools me-3"></i>Tecnologías Utilizadas
-                    </h2>
-                </div>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-3 col-sm-6">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <i class="fab fa-python tech-icon"></i>
-                            <h5 class="card-title">Python</h5>
-                            <p class="card-text">Lenguaje principal para análisis estadístico y modelado</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <i class="fas fa-project-diagram tech-icon"></i>
-                            <h5 class="card-title">Kedro</h5>
-                            <p class="card-text">Framework para orquestar pipelines de datos reproducibles</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <i class="fas fa-chart-area tech-icon"></i>
-                            <h5 class="card-title">PyMC</h5>
-                            <p class="card-text">Librería de programación probabilística para modelos bayesianos</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <i class="fas fa-chart-line tech-icon"></i>
-                            <h5 class="card-title">Scikit-learn</h5>
-                            <p class="card-text">Implementación de algoritmos de machine learning y MLE</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Objective Section -->
+        <section>
+            <h2 class="section-header">Objetivo de la Investigación</h2>
+            <p>
+                Determinar hasta qué punto un <strong>modelo bayesiano 1PL</strong> cuya distribución 
+                <em>prior</em> para la dificultad del ítem proviene de una predicción externa mejora la 
+                precisión de la estimación frente al método tradicional de Máxima Verosimilitud (MLE), 
+                considerando diferentes niveles de calidad del <em>prior</em> y tamaños muestrales.
+            </p>
+        </section>
 
-    <!-- Methodology Flow -->
-    <section class="container mb-5">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="section-title text-center">
-                    <i class="fas fa-route me-3"></i>Metodología
-                </h2>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-12">
-                <div class="d-flex flex-column align-items-center">
-                    <div class="flow-step">
-                        <i class="fas fa-random"></i>
-                        <h5>1. Simular Parámetros</h5>
-                        <p class="text-muted">Generar parámetros verdaderos para habilidades y dificultades</p>
-                    </div>
-                    
-                    <div class="flow-arrow">
-                        <i class="fas fa-arrow-down"></i>
-                    </div>
-                    
-                    <div class="flow-step">
-                        <i class="fas fa-brain"></i>
-                        <h5>2. Generar Prior para Dificultades</h5>
-                        <p class="text-muted">Crear distribución prior basada en predicciones externas</p>
-                    </div>
-                    
-                    <div class="flow-arrow">
-                        <i class="fas fa-arrow-down"></i>
-                    </div>
-                    
-                    <div class="flow-step">
-                        <i class="fas fa-database"></i>
-                        <h5>3. Simular Respuestas</h5>
-                        <p class="text-muted">Generar respuestas sintéticas usando modelo 1PL</p>
-                    </div>
-                    
-                    <div class="row mt-4">
-                        <div class="col-md-6">
-                            <div class="flow-step">
-                                <i class="fas fa-calculator"></i>
-                                <h5>4. Estimación MLE</h5>
-                                <p class="text-muted">Máxima verosimilitud tradicional</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="flow-step">
-                                <i class="fas fa-chart-area"></i>
-                                <h5>5. Estimación Bayesiana</h5>
-                                <p class="text-muted">PyMC con prior informativo</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="flow-arrow">
-                        <i class="fas fa-arrow-down"></i>
-                    </div>
-                    
-                    <div class="flow-step">
-                        <i class="fas fa-balance-scale"></i>
-                        <h5>6. Comparación y Análisis</h5>
-                        <p class="text-muted">Evaluación de métricas de precisión y sesgo</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pipeline Visualization Section -->
-    <section id="pipeline" class="pipeline-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2 class="mb-4">
-                        <i class="fas fa-sitemap me-3"></i>Explorar el Pipeline Interactivo
-                    </h2>
-                    <p class="lead mb-5">
-                        Visualiza el flujo completo del análisis con Kedro-Viz. 
-                        Explora los nodos, dependencias y resultados del pipeline de forma interactiva.
-                    </p>
-                    
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title text-dark">
-                                        <i class="fas fa-eye me-2"></i>Pipeline Interactivo
-                                    </h5>
-                                    <p class="card-text text-dark">
-                                        Accede a la visualización completa del pipeline generada con Kedro-Viz
-                                    </p>
-                                    <a href="./pipeline_visualization/index.html" class="btn btn-primary btn-lg" target="_blank">
-                                        <i class="fas fa-external-link-alt me-2"></i>
-                                        Abrir Visualización del Pipeline
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="container mb-5">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="section-title text-center">
-                    <i class="fas fa-chart-bar me-3"></i>Resultados Esperados
-                </h2>
-            </div>
-        </div>
-        
-        <div class="row g-4">
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <i class="fas fa-crosshairs me-2 text-success"></i>Precisión de Estimación
-                        </h5>
-                        <p class="card-text">
-                            Comparación de la precisión entre métodos MLE y Bayesiano 
-                            bajo diferentes condiciones de calidad del <em>prior</em>.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <!-- Methodology Section -->
+        <section>
+            <h2 class="section-header">Metodología</h2>
             
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <i class="fas fa-users me-2 text-info"></i>Impacto del Tamaño Muestral
-                        </h5>
-                        <p class="card-text">
-                            Análisis de cómo el tamaño de la muestra afecta la efectividad 
-                            de cada método de estimación.
-                        </p>
-                    </div>
-                </div>
+            <div class="subsection-header">Diseño del Experimento</div>
+            <div class="academic-card">
+                <p><strong>Tipo de estudio:</strong> Simulación Monte Carlo</p>
+                <p><strong>Factores evaluados:</strong></p>
+                <ul class="methodology-list">
+                    <li><strong>Calidad del <em>prior</em>:</strong> Tres niveles de correlación entre predicción externa y parámetro verdadero (R² = 0.2, 0.5, 0.8)</li>
+                    <li><strong>Tamaño muestral:</strong> Cuatro fracciones de la muestra completa (30%, 50%, 80%, 100% de 1,000 individuos)</li>
+                </ul>
+                <p><strong>Variable dependiente:</strong> Error cuadrático medio (MSE) de las estimaciones de parámetros</p>
             </div>
+
+            <div class="subsection-header">Flujo del Análisis</div>
+            <div class="academic-card">
+                <ol>
+                    <li><strong>Simulación de parámetros:</strong> Generación de parámetros verdaderos para habilidades (θ) y dificultades (β)</li>
+                    <li><strong>Generación del <em>prior</em>:</strong> Creación de distribución <em>prior</em> basada en predicciones externas con diferentes niveles de precisión</li>
+                    <li><strong>Simulación de respuestas:</strong> Generación de matrices de respuesta usando el modelo logístico 1PL</li>
+                    <li><strong>Estimación MLE:</strong> Implementación del método de máxima verosimilitud tradicional</li>
+                    <li><strong>Estimación Bayesiana:</strong> Implementación usando PyMC con <em>prior</em> informativo</li>
+                    <li><strong>Evaluación comparativa:</strong> Cálculo de métricas de precisión y análisis estadístico</li>
+                </ol>
+            </div>
+
+            <div class="subsection-header">Herramientas y Tecnologías</div>
+            <div class="academic-card">
+                <ul class="methodology-list">
+                    <li><strong>Python:</strong> Lenguaje principal para análisis estadístico y modelado</li>
+                    <li><strong>PyMC:</strong> Librería de programación probabilística para inferencia bayesiana</li>
+                    <li><strong>Kedro:</strong> Framework para orquestación de pipelines de datos reproducibles</li>
+                    <li><strong>Scikit-learn:</strong> Implementación de algoritmos de machine learning y MLE</li>
+                    <li><strong>NumPy/SciPy:</strong> Computación científica y operaciones matriciales</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Pipeline Visualization -->
+        <section>
+            <h2 class="section-header">Visualización del Pipeline de Análisis</h2>
             
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <i class="fas fa-medal me-2 text-warning"></i>Recomendaciones
-                        </h5>
-                        <p class="card-text">
-                            Guías sobre cuándo usar cada método basadas en la calidad 
-                            del <em>prior</em> y tamaño muestral disponible.
-                        </p>
+            <div class="figure-container">
+                <img src="img-kedro-viz.png" alt="Pipeline de análisis visualizado con Kedro-Viz" class="img-fluid" style="max-width: 100%; border: 1px solid var(--border-color);">
+                <div class="figure-caption">
+                    <strong>Figura 1.</strong> Pipeline completo del análisis implementado en Kedro. 
+                    El diagrama muestra el flujo de datos desde la simulación de parámetros hasta la generación de reportes comparativos.
+                </div>
+            </div>
+
+            <div class="pipeline-viz">
+                <h4>Explorar Pipeline Interactivo</h4>
+                <p>Accede a la visualización interactiva completa del pipeline para explorar dependencias y resultados en detalle.</p>
+                <a href="./pipeline_visualization/index.html" class="btn-academic" target="_blank">
+                    Ver Pipeline Interactivo
+                </a>
+            </div>
+        </section>
+
+        <!-- Preliminary Results -->
+        <section>
+            <h2 class="section-header">Resultados Preliminares</h2>
+            
+            <div class="subsection-header">Impacto del Tamaño Muestral en la Estimación MLE</div>
+            <p>
+                Los primeros resultados del experimento muestran evidencia clara del deterioro en la precisión 
+                de las estimaciones de máxima verosimilitud conforme se reduce el tamaño de la muestra.
+            </p>
+
+            <div class="results-grid">
+                <div class="figure-container">
+                    <img src="../data/08_reporting/mmle_estimation__s1/fig_percent_vs_mse.png" 
+                         alt="Error cuadrático medio vs. porcentaje de muestra" 
+                         class="img-fluid" 
+                         style="max-width: 100%; border: 1px solid var(--border-color);">
+                    <div class="figure-caption">
+                        <strong>Figura 2.</strong> Relación entre el porcentaje de muestra utilizada y el error cuadrático medio (MSE) 
+                        en las estimaciones MLE. Se observa un incremento sistemático del error conforme disminuye el tamaño muestral.
+                    </div>
+                </div>
+
+                <div class="figure-container">
+                    <img src="../data/08_reporting/mmle_estimation__s1/fig_percent_vs_r2.png" 
+                         alt="Coeficiente de determinación vs. porcentaje de muestra" 
+                         class="img-fluid" 
+                         style="max-width: 100%; border: 1px solid var(--border-color);">
+                    <div class="figure-caption">
+                        <strong>Figura 3.</strong> Relación entre el porcentaje de muestra utilizada y el coeficiente de determinación (R²) 
+                        entre parámetros verdaderos y estimados. La capacidad predictiva del modelo MLE disminuye notablemente con muestras reducidas.
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <div class="subsection-header">Interpretación Inicial</div>
+            <div class="academic-card">
+                <p>
+                    Los resultados preliminares confirman la hipótesis teórica sobre la degradación del rendimiento 
+                    de MLE en condiciones de muestra limitada. Estos hallazgos establecen la línea base para evaluar 
+                    si el enfoque bayesiano con <em>prior</em> informativo puede mitigar estas limitaciones.
+                </p>
+                <p>
+                    <strong>Próximos análisis:</strong> Comparación directa con resultados bayesianos y evaluación 
+                    del impacto de la calidad del <em>prior</em> en diferentes escenarios muestrales.
+                </p>
+            </div>
+        </section>
+
+        <!-- Progress Status -->
+        <section>
+            <h2 class="section-header">Estado Actual del Proyecto</h2>
+            
+            <div class="academic-card">
+                <h4>Componentes Completados</h4>
+                <ul class="methodology-list">
+                    <li>✅ Implementación del pipeline de simulación con Kedro</li>
+                    <li>✅ Módulo de estimación por máxima verosimilitud (MLE)</li>
+                    <li>✅ Generación de datos sintéticos y submuestreo</li>
+                    <li>✅ Análisis preliminar de resultados MLE</li>
+                    <li>✅ Visualización del pipeline con Kedro-Viz</li>
+                </ul>
+            </div>
+
+            <div class="academic-card">
+                <h4>En Desarrollo</h4>
+                <ul class="methodology-list">
+                    <li>🔄 Implementación completa del modelo bayesiano con PyMC</li>
+                    <li>🔄 Análisis comparativo entre métodos MLE y Bayesiano</li>
+                    <li>🔄 Evaluación del impacto de la calidad del <em>prior</em></li>
+                    <li>🔄 Generación de reportes estadísticos completos</li>
+                </ul>
+            </div>
+
+            <div class="academic-card">
+                <h4>Planificado</h4>
+                <ul class="methodology-list">
+                    <li>📋 Análisis de sensibilidad de hiperparámetros</li>
+                    <li>📋 Validación cruzada de resultados</li>
+                    <li>📋 Redacción del manuscrito final</li>
+                    <li>📋 Preparación de material suplementario</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- References and Links -->
+        <section>
+            <h2 class="section-header">Recursos y Enlaces</h2>
+            
+            <div class="academic-card">
+                <h4>Repositorio y Documentación</h4>
+                <p>
+                    <a href="https://github.com/[usuario]/analisis-calidad-estimacion-1pl-bayesiana" class="btn-academic">
+                        Repositorio GitHub
+                    </a>
+                    <a href="./pipeline_visualization/index.html" class="btn-academic">
+                        Pipeline Interactivo
+                    </a>
+                </p>
+            </div>
+        </section>
+    </div>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h5><i class="fas fa-graduation-cap me-2"></i>Proyecto de Magíster</h5>
-                    <p class="mb-0">
-                        Análisis de Calidad de Estimación en Modelos 1PL Bayesianos
-                    </p>
-                    <p class="mb-3">
-                        <small>Desarrollado con Kedro, PyMC y tecnologías modernas de ciencia de datos</small>
-                    </p>
-                    
-                    <div class="d-flex justify-content-center gap-3">
-                        <a href="https://github.com/" class="text-light" target="_blank">
-                            <i class="fab fa-github fa-2x"></i>
-                        </a>
-                        <a href="./pipeline_visualization/api/main" class="text-light" target="_blank">
-                            <i class="fas fa-sitemap fa-2x"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <footer style="background-color: var(--bg-light); border-top: 1px solid var(--border-color); margin-top: 3rem; padding: 2rem 0;">
+        <div class="container text-center">
+            <p style="color: var(--secondary-color); margin: 0;">
+                <strong>Proyecto de Magíster en [Área] | Universidad [Nombre]</strong><br>
+                <small>Desarrollado con metodologías de ciencia de datos reproducible</small>
+            </p>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    </script>
 </body>
 </html>
