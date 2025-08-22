@@ -43,12 +43,12 @@ graph TD
 Los primeros resultados del experimento confirman el deterioro sistemático en la precisión de las estimaciones de máxima verosimilitud conforme se reduce el tamaño de la muestra:
 
 #### Error Cuadrático Medio vs. Tamaño Muestral
-![MSE vs Sample Size](data/08_reporting/mmle_estimation__s1/fig_percent_vs_mse.png)
+![MSE vs Sample Size](docs/images/fig_percent_vs_mse.png)
 
 *La figura muestra un incremento claro del error cuadrático medio (MSE) conforme disminuye el porcentaje de muestra utilizada en la estimación MLE.*
 
 #### Coeficiente de Determinación vs. Tamaño Muestral  
-![R² vs Sample Size](data/08_reporting/mmle_estimation__s1/fig_percent_vs_r2.png)
+![R² vs Sample Size](docs/images/fig_percent_vs_r2.png)
 
 *La capacidad predictiva del modelo MLE (R² entre parámetros verdaderos y estimados) disminuye notablemente con muestras reducidas.*
 
